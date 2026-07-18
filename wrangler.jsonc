@@ -1,0 +1,12 @@
+// Assets-only Workers static-assets deploy (D-08) — no Worker script entry.
+// Source: developers.cloudflare.com/workers/static-assets/
+// The custom domain goaliegearfit.com (D-04) attaches later via the Cloudflare
+// dashboard; until then the site serves from workers.dev only (D-05).
+{
+  "name": "goaliegearfit",
+  "compatibility_date": "2026-07-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page" // Astro emits dist/404.html when a 404 page exists
+  }
+}
