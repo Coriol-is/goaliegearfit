@@ -8,6 +8,8 @@
 .hero-copy { position: relative; z-index: 1; }
 .home-hero h1 { margin-bottom: 1.5rem; }
 .home-hero h1 em { color: var(--red); font-style: normal; }
+.hero-tagline { color: var(--text); font-family: Impact,"Arial Narrow",sans-serif; font-size: clamp(1.7rem,3.5vw,3rem); line-height: 1; margin: -1rem 0 1.5rem; text-transform: uppercase; }
+.hero-tagline em { color: var(--red); font-style: normal; }
 .home-hero .lede { max-width: 36rem; }
 .hero-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-block: 2rem; }
 .button { border: 0; background: var(--blue); color: #fff; display: inline-flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 3.25rem; padding: .8rem 1.15rem; border-radius: .25rem; text-decoration: none; font: 900 .8rem/1 "Arial Narrow",Arial,sans-serif; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
