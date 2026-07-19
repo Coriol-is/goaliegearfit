@@ -1,5 +1,15 @@
 ---
-interface Props { datasetId:string; version:string; reviewedAt:string; market:string }
+interface Props { brand:string; logoPath:string; websiteUrl:string; sizingUrl:string; reviewedAt:string; market:string }
 const props=Astro.props;
+const reviewed=new Intl.DateTimeFormat("en-US",{month:"long",day:"numeric",year:"numeric",timeZone:"UTC"}).format(new Date(`${props.reviewedAt}T00:00:00Z`));
 ---
-<aside class="source" aria-label="Data source"><strong>{props.datasetId}</strong> v{props.version} · {props.market} market · reviewed <time datetime={props.reviewedAt}>{props.reviewedAt}</time></aside>
+<aside class="source vendor-source" aria-label={`${props.brand} manufacturer source`}>
+  <a class="vendor-source__logo" href={props.websiteUrl} rel="external">
+    <img src={props.logoPath} alt={`${props.brand} official website`} width="160" height="52" loading="lazy" />
+  </a>
+  <div>
+    <strong>Manufacturer sizing source</strong>
+    <p><a href={props.sizingUrl} rel="external">View {props.brand}'s sizing information</a></p>
+    <small>Checked for the {props.market === "US" ? "U.S." : props.market} market on <time datetime={props.reviewedAt}>{reviewed}</time>.</small>
+  </div>
+</aside>
