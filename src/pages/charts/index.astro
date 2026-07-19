@@ -1,0 +1,43 @@
+---
+import Breadcrumbs from "../../components/content/Breadcrumbs.astro";
+import SourceCitation from "../../components/content/SourceCitation.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getBrandCharts } from "../../lib/content/brand-charts";
+
+const charts = getBrandCharts();
+const first = charts[0];
+const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Size charts" }];
+---
+
+<BaseLayout
+  title="Goalie leg-pad size charts by brand | Goalie Gear Fit"
+  description="Choose a reviewed Bauer, CCM, TRUE, Warrior or Brian's goalie leg-pad size chart."
+  canonicalPath="/charts/"
+  {breadcrumbs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+  <header class="content">
+    <p class="eyebrow">Five reviewed brands</p>
+    <h1>Goalie leg-pad size charts by brand</h1>
+    <p class="lede">Choose the manufacturer you wear, then follow that chart's exact measurement method and fit cautions.</p>
+    <SourceCitation datasetId={first.datasetId} version={first.version} reviewedAt={first.reviewedAt} market={first.market} />
+  </header>
+  <section class="card" aria-labelledby="brand-heading">
+    <div class="content">
+      <h2 id="brand-heading">Choose your goalie pad brand</h2>
+      <p>Each page explains the brand's boundaries, overlaps, source gaps and physical fit checks.</p>
+    </div>
+    <div class="brand-grid">
+      {charts.map((chart) => (
+        <article class="brand-card">
+          <h3><a href={`/charts/${chart.slug}`}>{chart.brand} size chart</a></h3>
+          <p>{chart.rules.length} reviewed sizing rules · {chart.categories.length} chart section{chart.categories.length === 1 ? "" : "s"}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="content">
+    <h2>Not sure how to measure?</h2>
+    <p><a href="/guides/how-to-measure-goalie-pads">Follow the measurement guide</a> before comparing chart rows.</p>
+  </section>
+</BaseLayout>
