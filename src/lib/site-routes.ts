@@ -1,1 +1,1 @@
-export const contentRoutes=["/","/charts/","/charts/bauer","/charts/ccm","/charts/true","/charts/warrior","/charts/brians","/guides/how-to-measure-goalie-pads","/guides/thigh-rise-and-fit-check","/methodology"] as const;
+export const contentRoutes=["/","/calculator","/charts/","/charts/bauer","/charts/ccm","/charts/true","/charts/warrior","/charts/brians","/guides/how-to-measure-goalie-pads","/guides/thigh-rise-and-fit-check","/methodology"] as const;
