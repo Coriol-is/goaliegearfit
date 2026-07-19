@@ -1,7 +1,7 @@
 # goaliegearfit
 
 Deterministic hockey goalie leg-pad sizing calculator plus per-brand size-chart
-pages for the US market. Static Astro site deployed to Cloudflare Workers
+pages for the US market. Static Astro site deployed through Cloudflare Pages
 (assets-only); all sizing logic is a pure function of the vendored, published
 dataset — no hardcoded size rules, fail-closed when the data cannot support an
 answer.
@@ -21,7 +21,17 @@ answer.
 
 `.github/workflows/ci.yml` runs the full gate chain (`verify-dataset` →
 `astro check` → `vitest` → `build` → `scan-dist`) on every PR and push to
-`main`. The deploy job runs only on push to `main`, only after the gates job
+`main`. Cloudflare Pages Git integration is the production deployment source and
+builds each pushed main commit after GitHub's gates complete. The dormant
+token-gated Workers deploy job remains a harmless fallback and skips when its
+secrets are absent.
+
+Pages uses the Node version pinned in `.nvmrc`. The repository's assets-only
+`wrangler.jsonc` is retained for the fallback Workers job; Pages may warn that it
+does not consume this file, which is benign because Pages serves the Astro
+`dist/` output configured in the dashboard.
+
+The deploy job runs only on push to `main`, only after the gates job
 succeeds (`needs: gates`), and only when the `CLOUDFLARE_API_TOKEN` /
 `CLOUDFLARE_ACCOUNT_ID` repo secrets are present — it skips cleanly while
 Cloudflare credentials are deferred. Red gates structurally cannot deploy.

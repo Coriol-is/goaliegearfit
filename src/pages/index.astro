@@ -1,5 +1,9 @@
 ---
-// Walking-skeleton page. Plan 03 extends this with a real engine computation.
+import datasetJson from "../data/sizing/goalie-leg-pads-us-v0.1.json";
+import { recommend } from "../lib/engine/recommend";
+import type { Dataset } from "../lib/engine/types";
+const dataset = datasetJson as Dataset;
+const proof = recommend(dataset, { brand: "Bauer", category: "YOUTH", floor_to_knee_in: 12.5 });
 ---
 
 <!doctype html>
@@ -14,5 +18,11 @@
   <body>
     <h1>Goalie Gear Fit</h1>
     <p>This site is under construction.</p>
+    <section aria-labelledby="proof-heading">
+      <h2 id="proof-heading">Live rules-engine proof</h2>
+      <p>Recommendation: <strong>{proof.sizes.join(", ")}</strong></p>
+      <p>Matched rule: <code>{proof.matchedRuleIds.join(", ")}</code></p>
+      <p>Computed from dataset v{dataset.version} at build time.</p>
+    </section>
   </body>
 </html>
