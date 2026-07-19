@@ -1,0 +1,2 @@
+import {describe,expect,it} from "vitest";import {contentRoutes} from "../src/lib/site-routes";
+describe("SEO route inventory",()=>{it("contains each intended route once",()=>{expect(contentRoutes).toHaveLength(9);expect(new Set(contentRoutes).size).toBe(contentRoutes.length);expect(contentRoutes.filter(r=>r.startsWith("/charts/"))).toHaveLength(5)});it("excludes forbidden routes",()=>{expect(contentRoutes.some(r=>r.includes("vaughn"))).toBe(false)})});

@@ -1,0 +1,1 @@
+export const contentRoutes=["/","/charts/bauer","/charts/ccm","/charts/true","/charts/warrior","/charts/brians","/guides/how-to-measure-goalie-pads","/guides/thigh-rise-and-fit-check","/methodology"] as const;
