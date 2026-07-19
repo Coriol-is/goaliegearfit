@@ -1,0 +1,65 @@
+# CI/CD pipeline (D-09): gates hard-block deploy — red gates structurally cannot ship.
+# Single workflow file so gates and deploy can never race (Pitfall 5).
+#
+# Deploy is additionally conditional on the presence of the Cloudflare secrets
+# (CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID): per the Plan 01-01 checkpoint
+# decision, Cloudflare credentials are deferred — the deploy job skips cleanly
+# until the secrets are added, while the quality gates still hard-block on failure.
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verify-dataset # sha256 + schema + fixture count (ENG-04)
+      - run: npx astro check # typecheck
+      - run: npx vitest run # smoke now; 72 fixtures + properties from Plan 03 (ENG-02/03)
+      - run: npm run build # astro build -> dist/ (prebuild re-runs verify-dataset)
+      - run: npm run scan-dist # no-snapshot allowlist (DEPL-02)
+
+  # Secrets are not readable in job-level `if` expressions, so probe them in a
+  # tiny job and gate deploy on its output (env indirection pattern).
+  check-secrets:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    outputs:
+      cloudflare: ${{ steps.probe.outputs.cloudflare }}
+    steps:
+      - id: probe
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -n "$CF_TOKEN" ] && [ -n "$CF_ACCOUNT" ]; then
+            echo "cloudflare=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "cloudflare=false" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare secrets absent — deploy will skip cleanly (deferred per Plan 01-01 checkpoint)."
+          fi
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.check-secrets.outputs.cloudflare == 'true'
+    needs: [gates, check-secrets] # red gates block deploy — literal DEPL gate (D-09)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verify-dataset && npm run build
+      - uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
