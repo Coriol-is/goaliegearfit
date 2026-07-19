@@ -1,0 +1,5 @@
+---
+interface Props { datasetId:string; version:string; reviewedAt:string; market:string }
+const props=Astro.props;
+---
+<aside class="source" aria-label="Data source"><strong>{props.datasetId}</strong> v{props.version} · {props.market} market · reviewed <time datetime={props.reviewedAt}>{props.reviewedAt}</time></aside>

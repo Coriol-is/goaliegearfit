@@ -1,21 +1,17 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SourceCitation from "../components/content/SourceCitation.astro";
+import SizeChart from "../components/content/SizeChart.astro";
 import datasetJson from "../data/sizing/goalie-leg-pads-us-v0.1.json";
+import {getBrandChart} from "../lib/content/brand-charts";
 import { recommend } from "../lib/engine/recommend";
 import type { Dataset } from "../lib/engine/types";
 const dataset = datasetJson as Dataset;
 const proof = recommend(dataset, { brand: "Bauer", category: "YOUTH", floor_to_knee_in: 12.5 });
+const bauer=getBrandChart("bauer");
 ---
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Remove noindex only when the custom domain is attached (Pitfall 6 / D-05). -->
-    <meta name="robots" content="noindex" />
-    <title>Goalie Gear Fit</title>
-  </head>
-  <body>
+<BaseLayout title="Goalie Gear Fit" description="Independent, dataset-backed goalie leg-pad sizing guidance.">
+  <div class="content">
     <h1>Goalie Gear Fit</h1>
     <p>This site is under construction.</p>
     <section aria-labelledby="proof-heading">
@@ -24,5 +20,7 @@ const proof = recommend(dataset, { brand: "Bauer", category: "YOUTH", floor_to_k
       <p>Matched rule: <code>{proof.matchedRuleIds.join(", ")}</code></p>
       <p>Computed from dataset v{dataset.version} at build time.</p>
     </section>
-  </body>
-</html>
+    <SourceCitation datasetId={bauer.datasetId} version={bauer.version} reviewedAt={bauer.reviewedAt} market={bauer.market}/>
+  </div>
+  <section class="card" aria-labelledby="sample-chart"><h2 id="sample-chart">Dataset chart component proof</h2><SizeChart caption="Bauer Youth sample rows" rows={bauer.rules.slice(0,3)}/></section>
+</BaseLayout>
