@@ -1,11 +1,11 @@
 ---
-interface Props { brand:string; logoPath:string; websiteUrl:string; sizingUrl:string; reviewedAt:string; market:string }
+interface Props { brand:string; logoPath:string; websiteUrl:string; sizingUrl:string; reviewedAt:string; market:string; inverseLogo?:boolean }
 const props=Astro.props;
 const reviewed=new Intl.DateTimeFormat("en-US",{month:"long",day:"numeric",year:"numeric",timeZone:"UTC"}).format(new Date(`${props.reviewedAt}T00:00:00Z`));
 ---
 <aside class="source vendor-source" aria-label={`${props.brand} manufacturer source`}>
   <a class="vendor-source__logo" href={props.websiteUrl} rel="external">
-    <img src={props.logoPath} alt={`${props.brand} official website`} width="160" height="52" loading="lazy" />
+    <img class:list={{"brand-logo--inverse":props.inverseLogo}} src={props.logoPath} alt={`${props.brand} official website`} width="160" height="52" loading="lazy" />
   </a>
   <div>
     <strong>Manufacturer sizing source</strong>

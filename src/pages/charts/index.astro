@@ -28,7 +28,7 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Size charts" }];
     <div class="brand-grid">
       {charts.map((chart) => (
         <article class="brand-card">
-          <img class="brand-card__logo" src={chart.vendor.logoPath} alt="" width="140" height="48" loading="lazy" />
+          <img class:list={["brand-card__logo",{"brand-logo--inverse":chart.vendor.inverseLogo}]} src={chart.vendor.logoPath} alt="" width="140" height="48" loading="lazy" />
           <h3><a href={`/charts/${chart.slug}`}>{chart.brand} size chart</a></h3>
           <p>{chart.rules.length} reviewed sizing rules · {chart.categories.length} chart section{chart.categories.length === 1 ? "" : "s"}</p>
         </article>
