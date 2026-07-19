@@ -31,6 +31,14 @@ Pages uses the Node version pinned in `.nvmrc`. The repository's assets-only
 does not consume this file, which is benign because Pages serves the Astro
 `dist/` output configured in the dashboard.
 
+## Custom-domain launch boundary
+
+Builds remain `noindex` and omit canonical URLs unless `PUBLIC_SITE_ORIGIN` is
+an HTTPS custom domain. A `*.pages.dev` value deliberately remains `noindex`.
+Only set the variable after the domain is purchased, attached to Cloudflare
+Pages, and verified to return HTTPS 200; then confirm the production canonical
+and robots output before submitting the sitemap to Google Search Console.
+
 The deploy job runs only on push to `main`, only after the gates job
 succeeds (`needs: gates`), and only when the `CLOUDFLARE_API_TOKEN` /
 `CLOUDFLARE_ACCOUNT_ID` repo secrets are present — it skips cleanly while

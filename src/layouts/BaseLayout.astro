@@ -2,12 +2,14 @@
 import "../styles/global.css";
 import SiteHeader from "../components/layout/SiteHeader.astro";
 import SiteFooter from "../components/layout/SiteFooter.astro";
+import {resolveSiteConfig} from "../lib/site-config";
 interface Crumb {label:string;href?:string}
 interface Props {title:string;description:string;canonicalPath?:string;breadcrumbs?:Crumb[]}
 const {title,description,canonicalPath="/",breadcrumbs=[]}=Astro.props;
-const configured=import.meta.env.PUBLIC_SITE_ORIGIN?.replace(/\/$/,"");
-const launchReady=Boolean(configured&&!configured.includes("pages.dev"));
-const canonical=launchReady?new URL(canonicalPath,configured).toString():undefined;
+const site=resolveSiteConfig(import.meta.env.PUBLIC_SITE_ORIGIN);
+const configured=site.origin;
+const launchReady=site.launchReady;
+const canonical=configured?new URL(canonicalPath,configured).toString():undefined;
 const graph=[{"@type":"Organization","@id":"#organization",name:"Goalie Gear Fit",...(configured?{url:configured}:{})},{"@type":"WebSite","@id":"#website",name:"Goalie Gear Fit",...(configured?{url:configured}:{})},...(breadcrumbs.length?[{"@type":"BreadcrumbList",itemListElement:breadcrumbs.map((item,index)=>({"@type":"ListItem",position:index+1,name:item.label,...(item.href&&configured?{item:new URL(item.href,configured).toString()}:{})}))}]:[])];
 ---
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content={launchReady?"index,follow":"noindex"}><title>{title}</title><meta name="description" content={description}>{canonical&&<link rel="canonical" href={canonical}/>}<meta property="og:title" content={title}><meta property="og:description" content={description}><script is:inline type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@graph":graph})}/></head><body><SiteHeader/><main class="shell"><slot/></main><SiteFooter/></body></html>
