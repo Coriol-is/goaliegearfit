@@ -3,5 +3,6 @@ interface Row { id:string; sizeLabel:string; category?:string; dimensions:Array<
 interface Props { caption:string; rows:Row[] }
 const {caption,rows}=Astro.props;
 const range=(row:Row)=>row.dimensions.map(d=>`${d.field.replaceAll("_"," ")}: ${d.sourceNative?.min??"open"}–${d.sourceNative?.max??"open"} ${d.sourceNative?.unit??""}`).join("; ");
+const categoryLabel=(category?:string)=>category==="source_not_explicit"||!category?"Not specified by manufacturer":category;
 ---
-<p class="table-hint" id="chart-scroll-hint">Scroll the chart horizontally on smaller screens.</p><div class="table-scroll" tabindex="0" aria-describedby="chart-scroll-hint"><table><caption>{caption}</caption><thead><tr><th scope="col">Size</th><th scope="col">Category</th><th scope="col">Measurements</th></tr></thead><tbody>{rows.map(row=><tr data-rule-id={row.id}><th scope="row">{row.sizeLabel}</th><td>{row.category??"Not specified"}</td><td>{range(row)}</td></tr>)}</tbody></table></div>
+<p class="table-hint" id="chart-scroll-hint">Scroll the chart horizontally on smaller screens.</p><div class="table-scroll" tabindex="0" aria-describedby="chart-scroll-hint"><table><caption>{caption}</caption><thead><tr><th scope="col">Size</th><th scope="col">Category</th><th scope="col">Measurements</th></tr></thead><tbody>{rows.map(row=><tr data-rule-id={row.id}><th scope="row">{row.sizeLabel}</th><td>{categoryLabel(row.category)}</td><td>{range(row)}</td></tr>)}</tbody></table></div>
