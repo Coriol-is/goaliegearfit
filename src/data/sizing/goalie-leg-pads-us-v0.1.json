@@ -1,0 +1,3421 @@
+{
+  "datasetId": "goalie-leg-pads-us-v0.1",
+  "version": "0.1.1",
+  "market": "US",
+  "productFamily": "goalie_leg_pads",
+  "reviewedAt": "2026-07-17",
+  "freshness": "current",
+  "nextReviewAt": "2026-10-15",
+  "safetyDisclaimer": "A chart result is a starting candidate, not a guaranteed fit. Verify while wearing goalie skates and the protective setup used in play. In butterfly, confirm the knee lands securely near the center of the knee stack; otherwise stop and try another size or obtain an authorized-dealer fitting.",
+  "brandSupport": {
+    "Bauer": {
+      "status": "supported",
+      "authority": "first_party"
+    },
+    "CCM": {
+      "status": "supported",
+      "authority": "first_party",
+      "heightSemantics": "exact_anchor_only",
+      "unsupportedSizes": [
+        "24"
+      ]
+    },
+    "TRUE": {
+      "status": "supported",
+      "authority": "first_party"
+    },
+    "Warrior": {
+      "status": "supported",
+      "authority": "first_party"
+    },
+    "Brian's": {
+      "status": "supported_tool_verified_provisional",
+      "authority": "first_party_tool_verified",
+      "displayBadge": "Tool-verified provisional",
+      "mandatoryKneeBlockVerification": true
+    },
+    "Vaughn": {
+      "status": "unsupported_pending_evidence",
+      "authority": "unsupported",
+      "resultStatus": "cannot_determine"
+    }
+  },
+  "rules": [
+    {
+      "id": "bauer-goalie-pads-us-2025-01",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "YOUTH",
+      "sizeLabel": "S (20\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 31.75,
+          "max": 34.29,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 12.5,
+            "max": 13.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > YOUTH CSV row S",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Bauer labels input SHIN HEIGHT."
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-02",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "YOUTH",
+      "sizeLabel": "M (22\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 33.02,
+          "max": 35.56,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13,
+            "max": 14,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > YOUTH CSV row M",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Overlaps adjacent Youth rows."
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-03",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "YOUTH",
+      "sizeLabel": "L (24\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 34.29,
+          "max": 36.83,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13.5,
+            "max": 14.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > YOUTH CSV row L",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Overlaps adjacent Youth rows."
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-04",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "JUNIOR",
+      "sizeLabel": "S (26\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 35.56,
+          "max": 38.1,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 14,
+            "max": 15,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > JUNIOR CSV row S",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-05",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "JUNIOR",
+      "sizeLabel": "M (28\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 38.1,
+          "max": 40.64,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 15,
+            "max": 16,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > JUNIOR CSV row M",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-06",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "JUNIOR",
+      "sizeLabel": "L (30\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 40.64,
+          "max": 45.72,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16,
+            "max": 18,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > JUNIOR CSV row L",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Broad range overlaps Intermediate rows."
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-07",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "INTERMEDIATE",
+      "sizeLabel": "XS (28\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 38.1,
+          "max": 43.18,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 15,
+            "max": 17,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > INTERMEDIATE CSV row XS",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-08",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "INTERMEDIATE",
+      "sizeLabel": "S (30\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 40.64,
+          "max": 45.72,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16,
+            "max": 18,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > INTERMEDIATE CSV row S",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-09",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "INTERMEDIATE",
+      "sizeLabel": "M (31\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 44.45,
+          "max": 46.99,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17.5,
+            "max": 18.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > INTERMEDIATE CSV row M",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-10",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "INTERMEDIATE",
+      "sizeLabel": "L (32\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 45.72,
+          "max": 48.26,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18,
+            "max": 19,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > INTERMEDIATE CSV row L",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-11",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "SENIOR",
+      "sizeLabel": "XS (32\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 45.72,
+          "max": 48.26,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18,
+            "max": 19,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > SENIOR CSV row XS",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-12",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "SENIOR",
+      "sizeLabel": "S (33\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 48.26,
+          "max": 50.8,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19,
+            "max": 20,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > SENIOR CSV row S",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-13",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "SENIOR",
+      "sizeLabel": "M (34\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 49.53,
+          "max": 52.07,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19.5,
+            "max": 20.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > SENIOR CSV row M",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Overlaps adjacent rows."
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-14",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "SENIOR",
+      "sizeLabel": "L (35\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 50.8,
+          "max": 54.61,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 20,
+            "max": 21.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > SENIOR CSV row L",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Overlaps adjacent rows."
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-15",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "SENIOR",
+      "sizeLabel": "XL (36\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 54.61,
+          "max": 57.15,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 21.5,
+            "max": 22.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > SENIOR CSV row XL",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "bauer-goalie-pads-us-2025-16",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "bauer-goalie-pads-us-2025",
+      "brand": "Bauer",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "SENIOR",
+      "sizeLabel": "XXL (37\")",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 57.15,
+          "max": null,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": false,
+          "sourceNative": {
+            "min": 22.5,
+            "max": null,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "canonical page > SENIOR CSV row XXL",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Open-ended upper range explicitly shown as 22.5+."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h46",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "20",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": null,
+          "max": 33.02,
+          "unit": "cm",
+          "minInclusive": false,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": null,
+            "max": 13,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 116.84,
+          "max": 116.84,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 46,
+            "max": 46,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 3'10 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h48",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "21",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 33.02,
+          "max": 34.29,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13,
+            "max": 13.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 121.92,
+          "max": 121.92,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 48,
+            "max": 48,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 4'0 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h50",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "22",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 34.29,
+          "max": 35.56,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13.5,
+            "max": 14,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 127.0,
+          "max": 127.0,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 50,
+            "max": 50,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 4'2 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h52",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "23",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 35.56,
+          "max": 36.83,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 14,
+            "max": 14.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 132.08,
+          "max": 132.08,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 52,
+            "max": 52,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 4'4 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h56",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "26",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 38.1,
+          "max": 39.37,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 15,
+            "max": 15.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 142.24,
+          "max": 142.24,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 56,
+            "max": 56,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 4'8 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h60",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "28",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 40.64,
+          "max": 41.91,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16,
+            "max": 16.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 152.4,
+          "max": 152.4,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 60,
+            "max": 60,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'0 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h62",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "29",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 41.91,
+          "max": 43.18,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16.5,
+            "max": 17,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 157.48,
+          "max": 157.48,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 62,
+            "max": 62,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'2 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h64",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "30",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 43.18,
+          "max": 44.45,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17,
+            "max": 17.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 162.56,
+          "max": 162.56,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 64,
+            "max": 64,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'4 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h66",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "31",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 44.45,
+          "max": 46.99,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17.5,
+            "max": 18.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 167.64,
+          "max": 167.64,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 66,
+            "max": 66,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'6 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h67",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "31",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 44.45,
+          "max": 46.99,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17.5,
+            "max": 18.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 170.18,
+          "max": 170.18,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 67,
+            "max": 67,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'7 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h68",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "32",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 46.99,
+          "max": 49.53,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18.5,
+            "max": 19.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 172.72,
+          "max": 172.72,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 68,
+            "max": 68,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'8 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h69",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "32",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 46.99,
+          "max": 49.53,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18.5,
+            "max": 19.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 175.26,
+          "max": 175.26,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 69,
+            "max": 69,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'9 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h70",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "33",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 49.53,
+          "max": 52.07,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19.5,
+            "max": 20.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 177.8,
+          "max": 177.8,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 70,
+            "max": 70,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'10 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h71",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "33",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 49.53,
+          "max": 52.07,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19.5,
+            "max": 20.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 180.34,
+          "max": 180.34,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 71,
+            "max": 71,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 5'11 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h72",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "34",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 52.07,
+          "max": 54.61,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 20.5,
+            "max": 21.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 182.88,
+          "max": 182.88,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 72,
+            "max": 72,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'0 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h73",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "34",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 52.07,
+          "max": 54.61,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 20.5,
+            "max": 21.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 185.42,
+          "max": 185.42,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 73,
+            "max": 73,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'1 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h74",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "35",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 54.61,
+          "max": 57.15,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 21.5,
+            "max": 22.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 187.96,
+          "max": 187.96,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 74,
+            "max": 74,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'2 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h75",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "35",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 54.61,
+          "max": 57.15,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 21.5,
+            "max": 22.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 190.5,
+          "max": 190.5,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 75,
+            "max": 75,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'3 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h76",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "36",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 57.15,
+          "max": 59.69,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 22.5,
+            "max": 23.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 193.04,
+          "max": 193.04,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 76,
+            "max": 76,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'4 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h77",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "36",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 57.15,
+          "max": 59.69,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 22.5,
+            "max": 23.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 195.58,
+          "max": 195.58,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 77,
+            "max": 77,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'5 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h78",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "37",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 59.69,
+          "max": 62.23,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 23.5,
+            "max": 24.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 198.12,
+          "max": 198.12,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 78,
+            "max": 78,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'6 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h79",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "37",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 59.69,
+          "max": 62.23,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 23.5,
+            "max": 24.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 200.66,
+          "max": 200.66,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 79,
+            "max": 79,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 6'7 column",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "true-goalie-catalog-2026-01",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "JR",
+      "sizeLabel": "24",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 25.4,
+          "max": 29.21,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 10,
+            "max": 11.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > JR 24",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Catalog calls field knee-to-floor."
+    },
+    {
+      "id": "true-goalie-catalog-2026-02",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "JR",
+      "sizeLabel": "26",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 30.48,
+          "max": 34.29,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 12,
+            "max": 13.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > JR 26",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-03",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "JR",
+      "sizeLabel": "28",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 33.02,
+          "max": 36.83,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13,
+            "max": 14.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > JR 28",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Overlaps JR 26 from 13 to 13.5 inches."
+    },
+    {
+      "id": "true-goalie-catalog-2026-04",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "INT",
+      "sizeLabel": "29",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 40.64,
+          "max": 41.91,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16,
+            "max": 16.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > INT 29",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-05",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "INT",
+      "sizeLabel": "30",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 43.18,
+          "max": 44.45,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17,
+            "max": 17.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > INT 30",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-06",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "INT",
+      "sizeLabel": "31",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 45.72,
+          "max": 46.99,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18,
+            "max": 18.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > INT 31",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-07",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "30",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 43.18,
+          "max": 44.45,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17,
+            "max": 17.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 30",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-08",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "31",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 45.72,
+          "max": 46.99,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18,
+            "max": 18.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 31",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-09",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "32",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 48.26,
+          "max": 49.53,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19,
+            "max": 19.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 32",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-10",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "33",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 50.8,
+          "max": 52.07,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 20,
+            "max": 20.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 33",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-11",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "34",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 53.34,
+          "max": 54.61,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 21,
+            "max": 21.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 34",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-12",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "35",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 55.88,
+          "max": 57.15,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 22,
+            "max": 22.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 35",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-13",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "36",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 58.42,
+          "max": 59.69,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 23,
+            "max": 23.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 36",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-14",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "37",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 60.96,
+          "max": 62.23,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 24,
+            "max": 24.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 37",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "true-goalie-catalog-2026-15",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "true-goalie-catalog-2026",
+      "brand": "TRUE",
+      "productFamily": "goalie_leg_pads",
+      "model": "Nitro Pro/L87/PX4/L95",
+      "market": "US",
+      "category": "SR",
+      "sizeLabel": "38",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 63.5,
+          "max": 64.77,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 25,
+            "max": 25.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "2026 catalog p.20 > PAD SIZE CHART > SR 38",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": null
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-01",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "30\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 45.085,
+          "max": 46.355,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17.75,
+            "max": 18.25,
+            "unit": "in",
+            "printed_metric": {
+              "min": 452,
+              "max": 463,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 152.4,
+          "max": 152.4,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 60,
+            "max": 60,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 30 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Height is a printed anchor, not an explicit range. Chart has no C values for size 30. Endpoint ownership is not stated."
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-02",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "31\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 46.355,
+          "max": 47.625,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18.25,
+            "max": 18.75,
+            "unit": "in",
+            "printed_metric": {
+              "min": 464,
+              "max": 476,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 162.56,
+          "max": 162.56,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 64,
+            "max": 64,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 31 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Height is a printed anchor, not an explicit range. Chart has no C values for size 31. Endpoint ownership is not stated."
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-03",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "32\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 47.625,
+          "max": 48.895,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18.75,
+            "max": 19.25,
+            "unit": "in",
+            "printed_metric": {
+              "min": 477,
+              "max": 489,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 167.64,
+          "max": 167.64,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 66,
+            "max": 66,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 32 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Height is a printed anchor. C is length of extension above knee cap (+).",
+      "thighRiseMapping": [
+        {
+          "knee_to_thigh_in": 8,
+          "extension_in": 0.5
+        },
+        {
+          "knee_to_thigh_in": 8.5,
+          "extension_in": 1
+        },
+        {
+          "knee_to_thigh_in": 9,
+          "extension_in": 1.5
+        },
+        {
+          "knee_to_thigh_in": 9.5,
+          "extension_in": 2
+        },
+        {
+          "knee_to_thigh_in": 10,
+          "extension_in": 2.5
+        },
+        {
+          "knee_to_thigh_in": 10.5,
+          "extension_in": 3
+        },
+        {
+          "knee_to_thigh_in": 11,
+          "extension_in": 3.5
+        }
+      ]
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-04",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "33\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 48.895,
+          "max": 50.165,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19.25,
+            "max": 19.75,
+            "unit": "in",
+            "printed_metric": {
+              "min": 490,
+              "max": 502,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 172.72,
+          "max": 172.72,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 68,
+            "max": 68,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 33 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Height is a printed anchor. C is length of extension above knee cap (+).",
+      "thighRiseMapping": [
+        {
+          "knee_to_thigh_in": 8,
+          "extension_in": 0
+        },
+        {
+          "knee_to_thigh_in": 8.5,
+          "extension_in": 0.5
+        },
+        {
+          "knee_to_thigh_in": 9,
+          "extension_in": 1
+        },
+        {
+          "knee_to_thigh_in": 9.5,
+          "extension_in": 1.5
+        },
+        {
+          "knee_to_thigh_in": 10,
+          "extension_in": 2
+        },
+        {
+          "knee_to_thigh_in": 10.5,
+          "extension_in": 2.5
+        },
+        {
+          "knee_to_thigh_in": 11,
+          "extension_in": 3
+        }
+      ]
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-05",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "34\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 50.165,
+          "max": 51.435,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19.75,
+            "max": 20.25,
+            "unit": "in",
+            "printed_metric": {
+              "min": 503,
+              "max": 514,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 179.07,
+          "max": 179.07,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 70.5,
+            "max": 70.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 34 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Printed body-height anchor is 5'10.5. C is length of extension above knee cap (+).",
+      "thighRiseMapping": [
+        {
+          "knee_to_thigh_in": 8,
+          "extension_in": 0
+        },
+        {
+          "knee_to_thigh_in": 8.5,
+          "extension_in": 0.5
+        },
+        {
+          "knee_to_thigh_in": 9,
+          "extension_in": 1
+        },
+        {
+          "knee_to_thigh_in": 9.5,
+          "extension_in": 1.5
+        },
+        {
+          "knee_to_thigh_in": 10,
+          "extension_in": 2
+        },
+        {
+          "knee_to_thigh_in": 10.5,
+          "extension_in": 2.5
+        },
+        {
+          "knee_to_thigh_in": 11,
+          "extension_in": 3
+        }
+      ]
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-06",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "35\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 51.435,
+          "max": 52.705,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 20.25,
+            "max": 20.75,
+            "unit": "in",
+            "printed_metric": {
+              "min": 515,
+              "max": 527,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 182.88,
+          "max": 182.88,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 72,
+            "max": 72,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 35 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Height is a printed anchor. N/A is distinct from blank or zero.",
+      "thighRiseMapping": [
+        {
+          "knee_to_thigh_in": 8,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 8.5,
+          "extension_in": 0
+        },
+        {
+          "knee_to_thigh_in": 9,
+          "extension_in": 0.5
+        },
+        {
+          "knee_to_thigh_in": 9.5,
+          "extension_in": 1
+        },
+        {
+          "knee_to_thigh_in": 10,
+          "extension_in": 1.5
+        },
+        {
+          "knee_to_thigh_in": 10.5,
+          "extension_in": 2
+        },
+        {
+          "knee_to_thigh_in": 11,
+          "extension_in": 2.5
+        }
+      ]
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-07",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "36\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 52.705,
+          "max": 53.975,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 20.75,
+            "max": 21.25,
+            "unit": "in",
+            "printed_metric": {
+              "min": 528,
+              "max": 540,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 186.69,
+          "max": 186.69,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 73.5,
+            "max": 73.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 36 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Printed body-height anchor is 6'1.5. N/A is explicit.",
+      "thighRiseMapping": [
+        {
+          "knee_to_thigh_in": 8,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 8.5,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 9,
+          "extension_in": 0
+        },
+        {
+          "knee_to_thigh_in": 9.5,
+          "extension_in": 0.5
+        },
+        {
+          "knee_to_thigh_in": 10,
+          "extension_in": 1
+        },
+        {
+          "knee_to_thigh_in": 10.5,
+          "extension_in": 1.5
+        },
+        {
+          "knee_to_thigh_in": 11,
+          "extension_in": 2
+        }
+      ]
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-08",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "37\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 53.975,
+          "max": 55.245,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 21.25,
+            "max": 21.75,
+            "unit": "in",
+            "printed_metric": {
+              "min": 541,
+              "max": 552,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 190.5,
+          "max": 190.5,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 75,
+            "max": 75,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 37 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Height is a printed anchor. N/A is explicit.",
+      "thighRiseMapping": [
+        {
+          "knee_to_thigh_in": 8,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 8.5,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 9,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 9.5,
+          "extension_in": 0
+        },
+        {
+          "knee_to_thigh_in": 10,
+          "extension_in": 0.5
+        },
+        {
+          "knee_to_thigh_in": 10.5,
+          "extension_in": 1
+        },
+        {
+          "knee_to_thigh_in": 11,
+          "extension_in": 1.5
+        }
+      ]
+    },
+    {
+      "id": "warrior-goalie-pads-24-25-09",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "warrior-goalie-pads-24-25",
+      "brand": "Warrior",
+      "productFamily": "goalie_leg_pads",
+      "model": "Ritual 24-25",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "38\"",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 55.245,
+          "max": null,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": false,
+          "sourceNative": {
+            "min": 21.75,
+            "max": null,
+            "unit": "in",
+            "printed_metric": {
+              "min": 553,
+              "max": null,
+              "unit": "mm"
+            }
+          }
+        },
+        {
+          "field": "height_anchor",
+          "min": 190.5,
+          "max": null,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": false,
+          "sourceNative": {
+            "min": 75,
+            "max": null,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "high",
+      "sourceRef": "official chart > columns PAD SIZE 38 > rows A/B/C",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "notes": "Both FTK and body height are explicitly open-ended with &+. N/A is explicit.",
+      "thighRiseMapping": [
+        {
+          "knee_to_thigh_in": 8,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 8.5,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 9,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 9.5,
+          "status": "N/A"
+        },
+        {
+          "knee_to_thigh_in": 10,
+          "extension_in": 0
+        },
+        {
+          "knee_to_thigh_in": 10.5,
+          "extension_in": 0.5
+        },
+        {
+          "knee_to_thigh_in": 11,
+          "extension_in": 1
+        }
+      ]
+    },
+    {
+      "id": "brians-tool-verified-01",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "21",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 30.48,
+          "max": 30.48,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 12,
+            "max": 12,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 16.51,
+          "max": 16.51,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 6.5,
+            "max": 6.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-01",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-02",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "23",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 34.29,
+          "max": 34.29,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13.5,
+            "max": 13.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 17.78,
+          "max": 17.78,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 7,
+            "max": 7,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-02",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-03",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "25",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 36.83,
+          "max": 36.83,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 14.5,
+            "max": 14.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 19.05,
+          "max": 19.05,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 7.5,
+            "max": 7.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-03",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-04",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "27+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 39.37,
+          "max": 39.37,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 15.5,
+            "max": 15.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 22.86,
+          "max": 22.86,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 9,
+            "max": 9,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-04",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-05",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "29+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 40.64,
+          "max": 40.64,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16,
+            "max": 16,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 25.4,
+          "max": 25.4,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 10,
+            "max": 10,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-05",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-06",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "30+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 40.64,
+          "max": 40.64,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16,
+            "max": 16,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 26.67,
+          "max": 26.67,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 10.5,
+            "max": 10.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-06",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-07",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "31+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 41.910000000000004,
+          "max": 41.910000000000004,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 16.5,
+            "max": 16.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 26.67,
+          "max": 26.67,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 10.5,
+            "max": 10.5,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-07",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-08",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "32+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 43.18,
+          "max": 43.18,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17,
+            "max": 17,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 27.94,
+          "max": 27.94,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 11,
+            "max": 11,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-08",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-09",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "33+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 44.45,
+          "max": 44.45,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 17.5,
+            "max": 17.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 27.94,
+          "max": 27.94,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 11,
+            "max": 11,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-09",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-10",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "34+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 45.72,
+          "max": 45.72,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18,
+            "max": 18,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 27.94,
+          "max": 27.94,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 11,
+            "max": 11,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-10",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-11",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "35+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 45.72,
+          "max": 45.72,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 18,
+            "max": 18,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 30.48,
+          "max": 30.48,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 12,
+            "max": 12,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-11",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-12",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "36+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 48.26,
+          "max": 48.26,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19,
+            "max": 19,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 30.48,
+          "max": 30.48,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 12,
+            "max": 12,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-12",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-13",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "37+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 48.26,
+          "max": 48.26,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 19,
+            "max": 19,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 33.02,
+          "max": 33.02,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13,
+            "max": 13,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-13",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    },
+    {
+      "id": "brians-tool-verified-14",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "brians-fit-tool-current",
+      "brand": "Brian's",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_stock_unconfirmed",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "38+1",
+      "dimensions": [
+        {
+          "field": "ankle_to_knee",
+          "min": 50.8,
+          "max": 50.8,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 20,
+            "max": 20,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "knee_to_thigh",
+          "min": 33.02,
+          "max": 33.02,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 13,
+            "max": 13,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party_tool_verified",
+      "confidence": "medium",
+      "sourceRef": "Official public fit-tool response verified 2026-07-16",
+      "verificationRef": "brians-official-14",
+      "reviewedAt": "2026-07-17",
+      "status": "active",
+      "displayBadge": "Tool-verified provisional",
+      "notes": "Exact tested stock tuple only; model/category/version scope is not stated by the tool."
+    }
+  ]
+}

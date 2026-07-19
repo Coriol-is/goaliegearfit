@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sizing-rules.schema.json",
+  "title": "Reviewed goalie leg-pad sizing dataset",
+  "type": "object",
+  "required": ["datasetId", "version", "reviewedAt", "freshness", "brandSupport", "rules", "safetyDisclaimer"],
+  "properties": {
+    "datasetId": {"const": "goalie-leg-pads-us-v0.1"},
+    "version": {"type": "string"},
+    "reviewedAt": {"type": "string", "format": "date"},
+    "freshness": {"enum": ["current", "stale"]},
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "datasetId", "sourceId", "brand", "productFamily", "sizeLabel", "dimensions", "ruleType", "authority", "confidence", "sourceRef", "reviewedAt", "status"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "authority": {"enum": ["first_party", "first_party_tool_verified", "secondary_provisional"]},
+          "ruleType": {"enum": ["sourced", "derived", "editorial"]},
+          "status": {"enum": ["active", "stale", "deprecated"]},
+          "dimensions": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["field", "min", "max", "unit", "minInclusive", "maxInclusive", "sourceNative"],
+              "properties": {"unit": {"enum": ["cm", "kg"]}}
+            }
+          },
+          "thighRiseMapping": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["knee_to_thigh_in"],
+              "properties": {"knee_to_thigh_in": {"type": "number"}, "extension_in": {"type": "number"}, "status": {"const": "N/A"}}
+            }
+          }
+        }
+      }
+    }
+  }
+}

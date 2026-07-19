@@ -1,0 +1,21 @@
+{
+  "datasetId": "goalie-leg-pads-us-v0.1",
+  "version": "0.1.1",
+  "reviewedAt": "2026-07-17",
+  "freshness": "current",
+  "nextReviewAt": "2026-10-15",
+  "files": [
+    {
+      "path": "goalie-leg-pads-us-v0.1.json",
+      "sha256": "542c908e9d885eb3fb6afe6aa95cfa166d6aa19d760c5722b0893334a1c5932e"
+    },
+    {
+      "path": "sizing-rules.schema.json",
+      "sha256": "2b3f3f125b446dcca10c7d93581b218134e51faeca90cc115167114cedec0f07"
+    }
+  ],
+  "ruleCount": 76,
+  "fixtureCount": 72,
+  "fixtureFile": "../fixtures/goalie-leg-pads-us-v0.1.cases.json",
+  "copyrightedSnapshotsIncluded": false
+}

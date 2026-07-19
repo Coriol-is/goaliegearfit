@@ -1,0 +1,317 @@
+{
+  "dataset_id": "goalie-leg-pads-us-v0.1",
+  "fixture_status": "owner_approved_2026-07-17",
+  "base_fixture_file": "goalie-leg-pads-us-v1.cases.json",
+  "cases": [
+    {
+      "id": "brians-provisional-01",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 12,
+        "knee_to_thigh_in": 6.5,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "21",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-01; brians-official-01"
+    },
+    {
+      "id": "brians-provisional-02",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 13.5,
+        "knee_to_thigh_in": 7,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "23",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-02; brians-official-02"
+    },
+    {
+      "id": "brians-provisional-03",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 14.5,
+        "knee_to_thigh_in": 7.5,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "25",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-03; brians-official-03"
+    },
+    {
+      "id": "brians-provisional-04",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 15.5,
+        "knee_to_thigh_in": 9,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "27+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-04; brians-official-04"
+    },
+    {
+      "id": "brians-provisional-05",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 16,
+        "knee_to_thigh_in": 10,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "29+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-05; brians-official-05"
+    },
+    {
+      "id": "brians-provisional-06",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 16,
+        "knee_to_thigh_in": 10.5,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "30+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-06; brians-official-06"
+    },
+    {
+      "id": "brians-provisional-07",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 16.5,
+        "knee_to_thigh_in": 10.5,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "31+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-07; brians-official-07"
+    },
+    {
+      "id": "brians-provisional-08",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 17,
+        "knee_to_thigh_in": 11,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "32+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-08; brians-official-08"
+    },
+    {
+      "id": "brians-provisional-09",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 17.5,
+        "knee_to_thigh_in": 11,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "33+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-09; brians-official-09"
+    },
+    {
+      "id": "brians-provisional-10",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 18,
+        "knee_to_thigh_in": 11,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "34+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-10; brians-official-10"
+    },
+    {
+      "id": "brians-provisional-11",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 18,
+        "knee_to_thigh_in": 12,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "35+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-11; brians-official-11"
+    },
+    {
+      "id": "brians-provisional-12",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 19,
+        "knee_to_thigh_in": 12,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "36+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-12; brians-official-12"
+    },
+    {
+      "id": "brians-provisional-13",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 19,
+        "knee_to_thigh_in": 13,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "37+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-13; brians-official-13"
+    },
+    {
+      "id": "brians-provisional-14",
+      "authority": "first_party_tool_verified",
+      "input": {
+        "brand": "Brian's",
+        "ankle_to_knee_in": 20,
+        "knee_to_thigh_in": 13,
+        "design_level": "stock"
+      },
+      "expected": {
+        "status": "candidate",
+        "size": "38+1",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      },
+      "trace": "brians-provisional-14; brians-official-14"
+    },
+    {
+      "id": "support-bauer",
+      "input": {
+        "brand": "Bauer"
+      },
+      "expected": {
+        "support_status": "supported"
+      }
+    },
+    {
+      "id": "support-ccm",
+      "input": {
+        "brand": "CCM"
+      },
+      "expected": {
+        "support_status": "supported"
+      }
+    },
+    {
+      "id": "support-true",
+      "input": {
+        "brand": "TRUE"
+      },
+      "expected": {
+        "support_status": "supported"
+      }
+    },
+    {
+      "id": "support-warrior",
+      "input": {
+        "brand": "Warrior"
+      },
+      "expected": {
+        "support_status": "supported"
+      }
+    },
+    {
+      "id": "support-brians",
+      "input": {
+        "brand": "Brian's"
+      },
+      "expected": {
+        "support_status": "supported_tool_verified_provisional",
+        "public_result_allowed": true,
+        "display_badge": "Tool-verified provisional",
+        "knee_block_verification_required": true
+      }
+    },
+    {
+      "id": "support-vaughn",
+      "input": {
+        "brand": "Vaughn"
+      },
+      "expected": {
+        "support_status": "unsupported_pending_evidence",
+        "result_status": "cannot_determine"
+      }
+    }
+  ]
+}
