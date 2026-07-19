@@ -10,13 +10,38 @@ The 8–12 week (60–90 day) observation window starts only when all of these a
 - `noindex` is removed and the production pages are crawlable;
 - the sitemap is submitted in Google Search Console;
 - Search Console reports the test pages indexed, establishing the baseline date;
-- Plausible pageviews and the three calculator goals are verified on that same production domain.
+- production analytics pageviews and calculator events are verified on that same production domain.
 
 A Pages fallback deployment or an unindexed new domain does not start the clock.
 
+## Active observation window
+
+- **Status:** Active
+- **Week 0 baseline:** July 19, 2026
+- **Week 8 review:** September 13, 2026
+- **Week 12 decision deadline:** October 11, 2026
+
+The owner confirmed the Google Search Console property and sitemap submission, production GA4 pageview and calculator-event receipt, and the start of the observation window on July 19, 2026. GA4 is the selected production analytics provider for this experiment.
+
 ## Weekly evidence log
 
-Record weekly Search Console relevant impressions, clicks, unique relevant queries, pages receiving impressions, median/representative positions, impression trend, CTR, and buyer-intent share. Record Plausible calculator completions, brand selections, fail-closed hits, completion rate, and useful outbound engagement if added later. Keep the providers separate and never infer missing values.
+Record weekly Search Console relevant impressions, clicks, unique relevant queries, pages receiving impressions, median/representative positions, impression trend, CTR, and buyer-intent share. Record GA4 calculator completions, brand selections, fail-closed hits, comparison usage, and completion rate. Keep the providers separate and never infer missing values.
+
+| Checkpoint | Date | GSC impressions | Relevant queries | Indexed pages | GA4 completions | Fail-closed hits | Notes |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Week 0 | 2026-07-19 | — | — | — | — | — | Observation window started; GSC sitemap and GA4 event receipt confirmed by owner. |
+| Week 1 | 2026-07-26 | | | | | | |
+| Week 2 | 2026-08-02 | | | | | | |
+| Week 3 | 2026-08-09 | | | | | | |
+| Week 4 | 2026-08-16 | | | | | | |
+| Week 5 | 2026-08-23 | | | | | | |
+| Week 6 | 2026-08-30 | | | | | | |
+| Week 7 | 2026-09-06 | | | | | | |
+| Week 8 | 2026-09-13 | | | | | | First formal demand review. |
+| Week 9 | 2026-09-20 | | | | | | |
+| Week 10 | 2026-09-27 | | | | | | |
+| Week 11 | 2026-10-04 | | | | | | |
+| Week 12 | 2026-10-11 | | | | | | Final decision deadline. |
 
 ## Decision at weeks 8–12
 
