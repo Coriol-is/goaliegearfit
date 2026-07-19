@@ -1,0 +1,2 @@
+import {readFileSync} from "node:fs";import {describe,expect,it} from "vitest";
+describe("homepage language",()=>{const page=readFileSync("src/pages/index.astro","utf8");it("uses goalie-facing trust language",()=>{expect(page).toContain("reviewed manufacturer guidance");expect(page).toContain("verify knee-block landing")});it("does not expose audit jargon or internal ids",()=>expect(page).not.toMatch(/schema-validated|tests .* in CI|datasetId|goalie-leg-pads-us-v0\.1|v0\.1\.1/i))});
