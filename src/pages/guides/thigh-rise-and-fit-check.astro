@@ -2,4 +2,24 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";import Breadcrumbs from "../../components/content/Breadcrumbs.astro";
 const breadcrumbs=[{label:"Home",href:"/"},{label:"Guides"},{label:"Thigh rise and fit check"}];
 ---
-<BaseLayout title="Goalie pad thigh rise and fit checks | Goalie Gear Fit" description="Understand base pad size, thigh rise, chart gaps and knee-block verification." canonicalPath="/guides/thigh-rise-and-fit-check" {breadcrumbs} pageType="article" dateModified="2026-07-17"><Breadcrumbs items={breadcrumbs}/><article class="content"><h1>Thigh rise and physical fit checks</h1><p>Base pad size locates the knee area; thigh rise changes coverage above it. A preferred “+1” or “+2” cannot replace a sourced base-size rule.</p><section class="card"><h2>Read extension mappings honestly</h2><p>In reviewed Warrior data, a blank mapping means no reviewed extension value was published. An explicit <strong>N/A</strong> means that extension is unavailable for the tuple. Neither means zero, and neither should be guessed.</p></section><section class="card"><h2>Verify the knee block</h2><ol><li>Put on skates, pants and knee protection used in play.</li><li>Strap the pad according to its instructions and settle into stance.</li><li>Drop into butterfly several times. The knee must land securely on the block without sliding off an edge.</li><li>Check boot angle, rotation and thigh-rise interference while recovering to stance.</li></ol></section><section class="card"><h2>When to stop</h2><p>Stop and consult a qualified fitter when the chart returns a conflict, source gap, provisional tuple, or cannot-determine result; when the knee misses the block; or when model geometry changes the expected landing.</p></section><p><a href="/calculator">Return to the size calculator</a> · <a href="/methodology">How the dataset and fail-closed rules are reviewed</a></p></article></BaseLayout>
+<BaseLayout title="Goalie Pad Thigh Rise: +1 and +2 Explained | Goalie Gear Fit" description="What +1 and +2 thigh rise mean on goalie pads, why base size sets knee position, and how to verify fit at the knee block in butterfly." canonicalPath="/guides/thigh-rise-and-fit-check" {breadcrumbs} pageType="article" dateModified="2026-07-25"><Breadcrumbs items={breadcrumbs}/>
+<article class="content">
+<h1>Thigh rise and physical fit checks</h1>
+<p>Base pad size locates the knee area; thigh rise changes coverage above it. A preferred “+1” or “+2” cannot replace a sourced base-size rule.</p>
+<section class="card"><h2>What “+1” and “+2” mean</h2>
+<p>The “+” number is extra length added at the top of the pad, above the thigh-rise break. It raises coverage toward the five-hole without changing where the knee cradle sits. Manufacturers treat it differently: CCM lists thigh rise as personal preference, Warrior sizes it in half-inch steps from a thigh measurement, Brian's pairs each stock size with a thigh-rise length, and Vaughn's stock senior pads mostly ship +2.</p>
+<p>The subtlety that matters: a 33+2 and a 34+1 are the same total height, but the knee cradle sits in different places because base size — not total height — sets knee position. Pick base size from your measurement first; choose rise second.</p></section>
+<section class="card"><h2>Read extension mappings honestly</h2>
+<p>In reviewed Warrior data, a blank mapping means no reviewed extension value was published. An explicit <strong>N/A</strong> means that extension is unavailable for the tuple. Neither means zero, and neither should be guessed.</p></section>
+<section class="card"><h2>Verify the knee block</h2>
+<ol>
+<li>Put on skates, pants and knee protection used in play. Trying pads in shoes gives a false read.</li>
+<li>Strap the pad according to its instructions and settle into stance. Straps should be snug, not cranked — if a pad only feels right fully cinched, the size or model is wrong.</li>
+<li>Drop into butterfly several times. The knee must land securely on the block without sliding off an edge.</li>
+<li>Read the landing: knee above the block means the pad is too small; well below the block means too big. For a growing goalie, up to about one inch below the block's centre is the accepted allowance — never more.</li>
+<li>Check boot angle, pad rotation and thigh-rise interference while recovering to stance. A properly sized pad rotates cleanly between stance and butterfly.</li>
+</ol></section>
+<section class="card"><h2>When to stop</h2>
+<p>Stop and consult a qualified fitter when the chart returns a conflict, source gap, provisional tuple, or cannot-determine result; when the knee misses the block; or when model geometry changes the expected landing.</p></section>
+<p><a href="/guides/how-to-measure-goalie-pads">Back to the measuring guide</a> · <a href="/calculator">Return to the size calculator</a> · <a href="/methodology">How the dataset and fail-closed rules are reviewed</a></p>
+</article></BaseLayout>

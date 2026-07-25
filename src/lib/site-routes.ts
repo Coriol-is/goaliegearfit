@@ -7,8 +7,8 @@ export const contentPages=[
  {path:"/charts/true",lastmod:"2026-07-17"},
  {path:"/charts/warrior",lastmod:"2026-07-17"},
  {path:"/charts/brians",lastmod:"2026-07-17"},
- {path:"/guides/how-to-measure-goalie-pads",lastmod:"2026-07-20"},
- {path:"/guides/thigh-rise-and-fit-check",lastmod:"2026-07-17"},
+ {path:"/guides/how-to-measure-goalie-pads",lastmod:"2026-07-25"},
+ {path:"/guides/thigh-rise-and-fit-check",lastmod:"2026-07-25"},
  {path:"/methodology",lastmod:"2026-07-20"}
 ] as const;
 export const contentRoutes=contentPages.map(page=>page.path);
