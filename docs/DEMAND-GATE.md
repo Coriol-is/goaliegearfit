@@ -30,10 +30,10 @@ Record weekly Search Console relevant impressions, clicks, unique relevant queri
 | Checkpoint | Date | GSC impressions | Relevant queries | Indexed pages | GA4 completions | Fail-closed hits | Notes |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
 | Week 0 | 2026-07-19 | — | — | — | — | — | Observation window started; GSC sitemap and GA4 event receipt confirmed by owner. |
-| Week 1 | 2026-07-26 | | | | | | |
-| Week 2 | 2026-08-02 | | | | | | |
-| Week 3 | 2026-08-09 | | | | | | |
-| Week 4 | 2026-08-16 | | | | | | |
+| Week 1 | 2026-07-26 | | | | 0 | 0 | Covered by monthly GA4 export 2026-07-22..08-20: zero calculator events across the whole span (84 page_view, 76 users, 9 user_engagement total). GSC weekly data not yet exported. |
+| Week 2 | 2026-08-02 | | | | 0 | 0 | Covered by same monthly GA4 export: zero calculator events across the whole span. GSC weekly data not yet exported. |
+| Week 3 | 2026-08-09 | | | | 0 | 0 | GA4 export 2026-08-09..15: 9 users, only first_visit/page_view/session_start (1 per user); no calculator events fired. GSC weekly data not yet exported. |
+| Week 4 | 2026-08-16 | | | | 0 | 0 | Partial GA4 export 2026-08-16..21: 8 users, 2 user_engagement, 1 scroll; no calculator events. GSC weekly data not yet exported. **Indexing defect found 2026-08-21:** GSC coverage flat at 1 indexed / 13 not indexed since 2026-07-24 — sitemap and canonicals used bare paths that 308-redirect to trailing-slash URLs (canonical pointed through a redirect back to the page). Fixed in code (trailingSlash "always"; slash canonicals, sitemap and internal links). Weeks 0–4 search data reflect a site Google refused to index; consider restarting the observation clock from the redeploy + sitemap resubmission date. |
 | Week 5 | 2026-08-23 | | | | | | |
 | Week 6 | 2026-08-30 | | | | | | |
 | Week 7 | 2026-09-06 | | | | | | |

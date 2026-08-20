@@ -10,7 +10,7 @@ const faq=[
 ];
 const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:faq.map(item=>({"@type":"Question",name:item.q,acceptedAnswer:{"@type":"Answer",text:item.a}}))};
 ---
-<BaseLayout title="How to Measure Goalie Pads for the Right Size | Goalie Gear Fit" description="Step-by-step goalie pad measuring: floor-to-knee vs ankle-to-knee, what Bauer, CCM, TRUE, Warrior and Brian's charts ask for, and mistakes that break sizing." canonicalPath="/guides/how-to-measure-goalie-pads" {breadcrumbs} pageType="article" dateModified="2026-07-25"><Breadcrumbs items={breadcrumbs}/>
+<BaseLayout title="How to Measure Goalie Pads for the Right Size | Goalie Gear Fit" description="Step-by-step goalie pad measuring: floor-to-knee vs ankle-to-knee, what Bauer, CCM, TRUE, Warrior and Brian's charts ask for, and mistakes that break sizing." canonicalPath="/guides/how-to-measure-goalie-pads/" {breadcrumbs} pageType="article" dateModified="2026-07-25"><Breadcrumbs items={breadcrumbs}/>
 <article class="content">
 <h1>How to measure goalie pads for the right size</h1>
 <p>Every current manufacturer sizes leg pads from a leg measurement, but they do not all ask for the same one. Bauer, CCM, TRUE and Warrior charts key on <strong>floor-to-knee (FTK)</strong>; Brian's keys on <strong>ankle-to-knee (ATK)</strong> plus a knee-to-thigh measurement. The single rule that matters: measure the exact line the brand's chart names, and never convert one method into another.</p>
@@ -57,7 +57,7 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 <tr><th scope="row">Vaughn</th><td>None published</td><td>Vaughn directs buyers to an in-person retailer fitting.</td><td>—</td></tr>
 </tbody>
 </table></div>
-<p>The same measurement maps to different sizes across brands — a 19.5 in floor-to-knee lands in different rows on the Bauer, CCM, Warrior and TRUE charts. That is why the <a href="/calculator">calculator</a> asks for your brand first and never reuses a number across chart systems.</p></section>
+<p>The same measurement maps to different sizes across brands — a 19.5 in floor-to-knee lands in different rows on the Bauer, CCM, Warrior and TRUE charts. That is why the <a href="/calculator/">calculator</a> asks for your brand first and never reuses a number across chart systems.</p></section>
 <section class="card"><h2>About “ATK × 2” and “ATK + skate size + thigh” formulas</h2>
 <p>Older retailer guides estimate pad size by doubling ATK, or by adding ATK, skate size and a thigh measurement. These are rules of thumb, not any current manufacturer's published method — none of the six brands above instructs an arithmetic step like that. A formula estimate can be a sanity check, but the size decision should come from the brand's own chart row and, above all, from the on-ice knee-block check.</p></section>
 <section class="card"><h2>Common mistakes</h2>
@@ -84,6 +84,6 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 <li><a href="https://vaughnhockey.com/faq/" rel="noopener">Vaughn FAQ (retailer-fitting policy)</a></li>
 </ul>
 <p>Each reviewed chart row keeps its source reference on the <a href="/charts/">brand chart pages</a>.</p></section>
-<p><a href="/calculator">Use your measurement in the calculator</a> · <a href="/guides/thigh-rise-and-fit-check">Next: thigh rise and physical fit checks</a></p>
+<p><a href="/calculator/">Use your measurement in the calculator</a> · <a href="/guides/thigh-rise-and-fit-check/">Next: thigh rise and physical fit checks</a></p>
 </article>
 <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)}/></BaseLayout>
