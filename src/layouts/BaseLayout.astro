@@ -13,7 +13,6 @@ const site=resolveSiteConfig(import.meta.env.PUBLIC_SITE_ORIGIN);
 const configured=site.origin;
 const launchReady=site.launchReady;
 const canonical=configured?new URL(canonicalPath,configured).toString():undefined;
-const socialImage=configured?new URL("/images/goalie-butterfly-hero.webp",configured).toString():undefined;
 const analytics=resolveAnalyticsConfig(import.meta.env.PUBLIC_ANALYTICS_PROVIDER,import.meta.env.PUBLIC_PLAUSIBLE_SCRIPT_SRC,import.meta.env.PUBLIC_GA_MEASUREMENT_ID);
 const analyticsBootstrap=analytics.provider==="plausible"?`window.analyticsTrack=function(event){if(window.plausible)window.plausible(event.name,{props:event.props})}`:analytics.provider==="ga"?`window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};window.gtag('js',new Date());window.gtag('config',${JSON.stringify(analytics.measurementId)});var names=${JSON.stringify({"Calculator Brand Selected":"calculator_brand_selected","Calculator Completed":"calculator_completed","Calculator Fail Closed":"calculator_fail_closed","Calculator Comparison Used":"calculator_comparison_used"})};window.analyticsTrack=function(event){window.gtag('event',names[event.name],event.props)}`:"";
 const organizationId=configured?`${configured}/#organization`:"#organization",websiteId=configured?`${configured}/#website`:"#website",webpageId=canonical?`${canonical}#webpage`:"#webpage";
@@ -24,14 +23,14 @@ const graph=[{"@type":"Organization","@id":organizationId,name:"Goalie Gear Fit"
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0b2235">
+    <meta name="theme-color" content="#172023">
     <meta name="robots" content={launchReady?"index,follow":"noindex"}>
     <title>{title}</title>
     <meta name="description" content={description}>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     {canonical&&<link rel="canonical" href={canonical}/>}
     <meta property="og:title" content={title}><meta property="og:description" content={description}><meta property="og:type" content={pageType==="article"?"article":"website"}><meta property="og:site_name" content="Goalie Gear Fit">
-    {canonical&&<meta property="og:url" content={canonical}/>} {socialImage&&<meta property="og:image" content={socialImage}/>}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content={title}><meta name="twitter:description" content={description}>{socialImage&&<meta name="twitter:image" content={socialImage}/>}
+    {canonical&&<meta property="og:url" content={canonical}/>}<meta name="twitter:card" content="summary"><meta name="twitter:title" content={title}><meta name="twitter:description" content={description}>
     {analytics.provider!=="none"&&<script is:inline async={analytics.provider==="ga"} defer={analytics.provider==="plausible"} src={analytics.scriptSrc}></script>}
     {analyticsBootstrap&&<script is:inline set:html={analyticsBootstrap}/>}<script is:inline type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@graph":graph})}/>
   </head>
