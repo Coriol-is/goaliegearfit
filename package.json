@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",
+    "audit:seo": "node scripts/audit-seo.ts",
     "verify-dataset": "node scripts/verify-dataset.ts",
     "scan-dist": "node scripts/scan-dist.ts",
     "prebuild": "npm run verify-dataset"
