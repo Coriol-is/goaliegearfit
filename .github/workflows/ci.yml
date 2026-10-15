@@ -12,7 +12,7 @@ on:
     branches: [main]
 jobs:
   gates:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -30,7 +30,7 @@ jobs:
   # tiny job and gate deploy on its output (env indirection pattern).
   check-secrets:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     outputs:
       cloudflare: ${{ steps.probe.outputs.cloudflare }}
     steps:
@@ -49,7 +49,7 @@ jobs:
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.check-secrets.outputs.cloudflare == 'true'
     needs: [gates, check-secrets] # red gates block deploy — literal DEPL gate (D-09)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
