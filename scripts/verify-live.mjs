@@ -5,7 +5,7 @@ if (!origin || !revision) throw new Error("SITE_ORIGIN and GITHUB_SHA are requir
 const paths = ["/", "/calculator/"];
 for (const path of paths) {
   let checked = false;
-  for (let attempt = 0; attempt < 10; attempt++) {
+  for (let attempt = 0; attempt < 48; attempt++) {
     const response = await fetch(new URL(path, origin), { headers: { "Cache-Control": "no-cache" } });
     const html = await response.text();
     const deployed = html.match(/<meta name="build-revision" content="([^"]+)"/)?.[1];
@@ -15,7 +15,7 @@ for (const path of paths) {
       checked = true;
       break;
     }
-    if (attempt < 9) await new Promise(resolve => setTimeout(resolve, 5000));
+    if (attempt < 47) await new Promise(resolve => setTimeout(resolve, 5000));
   }
   if (!checked) throw new Error(`Deployment revision not live at ${path}`);
   console.log(`Verified ${origin}${path} at ${revision}`);

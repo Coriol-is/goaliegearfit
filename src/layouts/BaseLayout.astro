@@ -23,7 +23,7 @@ const graph=[{"@type":"Organization","@id":organizationId,name:"Goalie Gear Fit"
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="build-revision" content={process.env.GITHUB_SHA ?? "local"} />
+    <meta name="build-revision" content={process.env.GITHUB_SHA ?? process.env.CF_PAGES_COMMIT_SHA ?? "local"} />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#172023">
     <meta name="robots" content={!noindex&&launchReady?"index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1":"noindex,nofollow"}>
