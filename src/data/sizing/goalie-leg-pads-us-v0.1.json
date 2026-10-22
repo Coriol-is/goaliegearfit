@@ -1,10 +1,10 @@
 {
   "datasetId": "goalie-leg-pads-us-v0.1",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "market": "US",
   "productFamily": "goalie_leg_pads",
   "reviewedAt": "2026-07-17",
-  "freshness": "current",
+  "freshness": "stale",
   "nextReviewAt": "2026-10-15",
   "safetyDisclaimer": "A chart result is a starting candidate, not a guaranteed fit. Verify while wearing goalie skates and the protective setup used in play. In butterfly, confirm the knee lands securely near the center of the knee stack; otherwise stop and try another size or obtain an authorized-dealer fitting.",
   "brandSupport": {
@@ -16,9 +16,7 @@
       "status": "supported",
       "authority": "first_party",
       "heightSemantics": "exact_anchor_only",
-      "unsupportedSizes": [
-        "24"
-      ]
+      "unsupportedSizes": []
     },
     "TRUE": {
       "status": "supported",
@@ -611,7 +609,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 3'10 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -634,7 +632,7 @@
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 13,
+            "min": 13.0,
             "max": 13.5,
             "unit": "in"
           }
@@ -657,7 +655,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 4'0 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -681,7 +679,7 @@
           "maxInclusive": true,
           "sourceNative": {
             "min": 13.5,
-            "max": 14,
+            "max": 14.0,
             "unit": "in"
           }
         },
@@ -703,7 +701,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 4'2 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -726,7 +724,7 @@
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 14,
+            "min": 14.0,
             "max": 14.5,
             "unit": "in"
           }
@@ -749,7 +747,53 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 4'4 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
+      "status": "active",
+      "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
+    },
+    {
+      "id": "ccm-goalie-fit-us-current-h54",
+      "datasetId": "goalie-leg-pads-us-v0.1",
+      "sourceId": "ccm-goalie-fit-us-current",
+      "brand": "CCM",
+      "productFamily": "goalie_leg_pads",
+      "model": "generic_current",
+      "market": "US",
+      "category": "source_not_explicit",
+      "sizeLabel": "24",
+      "dimensions": [
+        {
+          "field": "floor_to_knee",
+          "min": 38.1,
+          "max": 39.37,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 15.0,
+            "max": 15.5,
+            "unit": "in"
+          }
+        },
+        {
+          "field": "height",
+          "min": 137.16,
+          "max": 137.16,
+          "unit": "cm",
+          "minInclusive": true,
+          "maxInclusive": true,
+          "sourceNative": {
+            "min": 54,
+            "max": 54,
+            "unit": "in"
+          }
+        }
+      ],
+      "ruleType": "sourced",
+      "authority": "first_party",
+      "confidence": "medium",
+      "sourceRef": "Find your size table > 4'6 column",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -766,14 +810,14 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 38.1,
-          "max": 39.37,
+          "min": 39.37,
+          "max": 40.64,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 15,
-            "max": 15.5,
+            "min": 15.5,
+            "max": 16.0,
             "unit": "in"
           }
         },
@@ -795,7 +839,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 4'8 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -818,7 +862,7 @@
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 16,
+            "min": 16.0,
             "max": 16.5,
             "unit": "in"
           }
@@ -841,7 +885,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'0 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -865,7 +909,7 @@
           "maxInclusive": true,
           "sourceNative": {
             "min": 16.5,
-            "max": 17,
+            "max": 17.0,
             "unit": "in"
           }
         },
@@ -887,7 +931,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'2 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -910,7 +954,7 @@
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 17,
+            "min": 17.0,
             "max": 17.5,
             "unit": "in"
           }
@@ -933,7 +977,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'4 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -951,13 +995,13 @@
         {
           "field": "floor_to_knee",
           "min": 44.45,
-          "max": 46.99,
+          "max": 45.72,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
             "min": 17.5,
-            "max": 18.5,
+            "max": 18.0,
             "unit": "in"
           }
         },
@@ -979,7 +1023,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'6 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -996,13 +1040,13 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 44.45,
+          "min": 45.72,
           "max": 46.99,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 17.5,
+            "min": 18.0,
             "max": 18.5,
             "unit": "in"
           }
@@ -1025,7 +1069,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'7 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1043,13 +1087,13 @@
         {
           "field": "floor_to_knee",
           "min": 46.99,
-          "max": 49.53,
+          "max": 48.26,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
             "min": 18.5,
-            "max": 19.5,
+            "max": 19.0,
             "unit": "in"
           }
         },
@@ -1071,7 +1115,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'8 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1088,13 +1132,13 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 46.99,
+          "min": 48.26,
           "max": 49.53,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 18.5,
+            "min": 19.0,
             "max": 19.5,
             "unit": "in"
           }
@@ -1117,7 +1161,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'9 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1135,13 +1179,13 @@
         {
           "field": "floor_to_knee",
           "min": 49.53,
-          "max": 52.07,
+          "max": 50.8,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
             "min": 19.5,
-            "max": 20.5,
+            "max": 20.0,
             "unit": "in"
           }
         },
@@ -1163,7 +1207,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'10 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1180,13 +1224,13 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 49.53,
+          "min": 50.8,
           "max": 52.07,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 19.5,
+            "min": 20.0,
             "max": 20.5,
             "unit": "in"
           }
@@ -1209,7 +1253,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 5'11 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1227,13 +1271,13 @@
         {
           "field": "floor_to_knee",
           "min": 52.07,
-          "max": 54.61,
+          "max": 53.34,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
             "min": 20.5,
-            "max": 21.5,
+            "max": 21.0,
             "unit": "in"
           }
         },
@@ -1255,7 +1299,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'0 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1272,13 +1316,13 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 52.07,
+          "min": 53.34,
           "max": 54.61,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 20.5,
+            "min": 21.0,
             "max": 21.5,
             "unit": "in"
           }
@@ -1301,7 +1345,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'1 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1319,13 +1363,13 @@
         {
           "field": "floor_to_knee",
           "min": 54.61,
-          "max": 57.15,
+          "max": 55.88,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
             "min": 21.5,
-            "max": 22.5,
+            "max": 22.0,
             "unit": "in"
           }
         },
@@ -1347,7 +1391,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'2 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1364,13 +1408,13 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 54.61,
+          "min": 55.88,
           "max": 57.15,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 21.5,
+            "min": 22.0,
             "max": 22.5,
             "unit": "in"
           }
@@ -1393,7 +1437,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'3 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1411,13 +1455,13 @@
         {
           "field": "floor_to_knee",
           "min": 57.15,
-          "max": 59.69,
+          "max": 58.42,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
             "min": 22.5,
-            "max": 23.5,
+            "max": 23.0,
             "unit": "in"
           }
         },
@@ -1439,7 +1483,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'4 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1456,13 +1500,13 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 57.15,
+          "min": 58.42,
           "max": 59.69,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 22.5,
+            "min": 23.0,
             "max": 23.5,
             "unit": "in"
           }
@@ -1485,7 +1529,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'5 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1503,13 +1547,13 @@
         {
           "field": "floor_to_knee",
           "min": 59.69,
-          "max": 62.23,
+          "max": 60.96,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
             "min": 23.5,
-            "max": 24.5,
+            "max": 24.0,
             "unit": "in"
           }
         },
@@ -1531,7 +1575,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'6 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
@@ -1548,13 +1592,13 @@
       "dimensions": [
         {
           "field": "floor_to_knee",
-          "min": 59.69,
+          "min": 60.96,
           "max": 62.23,
           "unit": "cm",
           "minInclusive": true,
           "maxInclusive": true,
           "sourceNative": {
-            "min": 23.5,
+            "min": 24.0,
             "max": 24.5,
             "unit": "in"
           }
@@ -1577,7 +1621,7 @@
       "authority": "first_party",
       "confidence": "medium",
       "sourceRef": "Find your size table > 6'7 column",
-      "reviewedAt": "2026-07-17",
+      "reviewedAt": "2026-10-22",
       "status": "active",
       "notes": "Original FTK + height column tuple. Height is an exact anchor only; never interpolate."
     },
