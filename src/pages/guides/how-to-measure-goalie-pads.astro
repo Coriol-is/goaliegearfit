@@ -6,19 +6,20 @@ const faq=[
  {q:"Do I stand or sit while measuring?",a:"It depends on the brand chart. Bauer, CCM and TRUE describe a standing floor-to-knee measurement with a slight knee bend. Warrior's official chart diagram says to take floor-to-knee while sitting. Brian's ankle-to-knee is taken with the leg slightly bent. Use the posture the chart you are matching describes."},
  {q:"What is the difference between floor-to-knee and ankle-to-knee?",a:"Floor-to-knee (FTK) runs from the floor to the centre of the kneecap and includes the height of your foot and ankle. Ankle-to-knee (ATK) starts at the ankle bone, so it is several inches shorter. They are different inputs for different charts and cannot be converted into one another with a fixed formula."},
  {q:"Can I size goalie pads from height or age alone?",a:"No. Height appears in some charts (CCM and Warrior use it alongside floor-to-knee), but no current manufacturer chart sizes leg pads from height or age alone. Two goalies of the same height can need different pad sizes because leg proportions differ."},
- {q:"How much growing room is acceptable for a young goalie?",a:"Retail fitting guides converge on the same limit: in the butterfly, the knee may land slightly low in the knee cradle — no more than about one inch below its centre — but must never slide off the block. Oversizing beyond that hurts movement and technique more than it saves money."}
+ {q:"How much growing room is acceptable for a young goalie?",a:"Do not choose an oversized pad solely for growing room. Check the exact manufacturer fitting instructions and knee landing with a qualified dealer; the calculator does not define a universal safe growth allowance."}
 ];
 const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:faq.map(item=>({"@type":"Question",name:item.q,acceptedAnswer:{"@type":"Answer",text:item.a}}))};
 ---
-<BaseLayout title="How to Measure Goalie Pads for the Right Size | Goalie Gear Fit" description="Step-by-step goalie pad measuring: floor-to-knee vs ankle-to-knee, what Bauer, CCM, TRUE, Warrior and Brian's charts ask for, and mistakes that break sizing." canonicalPath="/guides/how-to-measure-goalie-pads/" {breadcrumbs} pageType="article" dateModified="2026-07-25"><Breadcrumbs items={breadcrumbs}/>
+<BaseLayout title="How to Measure Goalie Pads for the Right Size | Goalie Gear Fit" description="Step-by-step goalie pad measuring: floor-to-knee vs ankle-to-knee, what Bauer, CCM, TRUE, Warrior and Brian's charts ask for, and mistakes that break sizing." canonicalPath="/guides/how-to-measure-goalie-pads/" {breadcrumbs} pageType="article" dateModified="2026-10-22"><Breadcrumbs items={breadcrumbs}/>
 <article class="content">
 <h1>How to measure goalie pads for the right size</h1>
-<p>Every current manufacturer sizes leg pads from a leg measurement, but they do not all ask for the same one. Bauer, CCM, TRUE and Warrior charts key on <strong>floor-to-knee (FTK)</strong>; Brian's keys on <strong>ankle-to-knee (ATK)</strong> plus a knee-to-thigh measurement. The single rule that matters: measure the exact line the brand's chart names, and never convert one method into another.</p>
+<p>The reviewed manufacturer charts size leg pads from a leg measurement, but they do not all ask for the same one. Bauer, CCM, TRUE and Warrior charts key on <strong>floor-to-knee (FTK)</strong>; Brian's keys on <strong>ankle-to-knee (ATK)</strong> plus a knee-to-thigh measurement. The single rule that matters: measure the exact line the brand's chart names, and never convert one method into another.</p>
 <section class="card"><h2>The short version</h2>
 <ul>
-<li><strong>Bauer, CCM, TRUE, Warrior:</strong> measure floor-to-knee — from the floor straight up to the centre of the kneecap, in bare feet or socks, knee slightly bent.</li>
+<li><strong>Bauer, CCM, TRUE:</strong> measure floor-to-knee — from the floor to the centre of the kneecap, using the posture and footwear instructions in the exact chart.</li>
+<li><strong>Warrior:</strong> follow the reviewed seated FTK diagram; standing height is an optional cross-check, not a requirement for the base size.</li>
 <li><strong>Brian's:</strong> measure ankle-to-knee — from the ankle bone to the centre of the kneecap with the leg slightly bent — plus knee to desired thigh height.</li>
-<li><strong>Vaughn:</strong> publishes no measuring method and directs buyers to an in-person retailer fitting.</li>
+<li><strong>Vaughn:</strong> has no supported measurement mapping in this calculator and directs buyers to an in-person retailer fitting.</li>
 </ul>
 <p>FTK includes your foot and ankle height, so it is always several inches longer than ATK. Feeding an ATK value into an FTK chart (or the reverse) produces a pad one or more sizes wrong.</p></section>
 <section class="card"><h2>What you need</h2>
@@ -52,7 +53,7 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 <tr><th scope="row">Bauer</th><td>Floor-to-knee (“shin height”)</td><td>Soft tape from the floor to the centre of the knee.</td><td>Age/level category (Youth–Senior)</td></tr>
 <tr><th scope="row">CCM</th><td>Floor-to-knee</td><td>Bare foot on the floor, straight up to the middle of the kneecap, knee slightly bent.</td><td>Standing height</td></tr>
 <tr><th scope="row">TRUE</th><td>Floor-to-knee</td><td>Bare feet, slight knee bend, tape to the middle of the knee.</td><td>Level category (JR/INT/SR)</td></tr>
-<tr><th scope="row">Warrior</th><td>Floor-to-knee</td><td>Official chart diagram: taken while sitting, floor to knee pivot point.</td><td>Standing height; thigh measurement for the “+” extension</td></tr>
+<tr><th scope="row">Warrior</th><td>Floor-to-knee</td><td>Official chart diagram: taken while sitting, floor to knee pivot point.</td><td>Optional standing-height cross-check; knee-to-thigh for a separate “+” extension</td></tr>
 <tr><th scope="row">Brian's</th><td>Ankle-to-knee</td><td>Leg slightly bent, ankle bone to the centre of the knee.</td><td>Knee-to-thigh length</td></tr>
 <tr><th scope="row">Vaughn</th><td>None published</td><td>Vaughn directs buyers to an in-person retailer fitting.</td><td>—</td></tr>
 </tbody>

@@ -35,7 +35,7 @@
     {"id":"true-sr-above","input":{"brand":"TRUE","category":"SR","floor_to_knee_in":25.51},"expected":{"status":"cannot_determine"},"trace":"TRUE SR"},
     {"id":"true-plus-size","input":{"brand":"TRUE","category":"SR","floor_to_knee_in":20.2,"requested_thigh_rise":"+2"},"expected":{"status":"cannot_determine","reason":"personal_preference_not_base_size_rule"},"trace":"TRUE catalog says thigh rise is personal preference"},
     {"id":"ccm-below","input":{"brand":"CCM","floor_to_knee_in":12.5,"height_in":45},"expected":{"status":"conflict","sizes":[]},"trace":"CCM exact height anchors; no interpolation"},
-    {"id":"ccm-exact-13","input":{"brand":"CCM","floor_to_knee_in":13,"height_in":46},"expected":{"status":"adjacent_sizes","sizes":["20","21"]},"trace":"CCM shared endpoint; editorial all-matches behavior"},
+    {"id":"ccm-exact-13","input":{"brand":"CCM","floor_to_knee_in":13,"height_in":46},"expected":{"status":"candidate","sizes":["20"]},"trace":"CCM shared FTK endpoint; mandatory height46 selects only source column size20"},
     {"id":"ccm-internal","input":{"brand":"CCM","floor_to_knee_in":19.25,"height_in":69},"expected":{"status":"candidate","sizes":["32"]},"trace":"CCM 5'9 / FTK 19-19.5 source column"},
     {"id":"ccm-exact-max","input":{"brand":"CCM","floor_to_knee_in":24.5,"height_in":79},"expected":{"status":"candidate","sizes":["37"]},"trace":"CCM 6'7 source column"},
     {"id":"ccm-above","input":{"brand":"CCM","floor_to_knee_in":24.51,"height_in":80},"expected":{"status":"cannot_determine"},"trace":"CCM table maximum"},

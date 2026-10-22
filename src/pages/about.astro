@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/content/Breadcrumbs.astro";
+const breadcrumbs = [{label:"Home",href:"/"},{label:"About and corrections"}];
+---
+<BaseLayout title="About and Sizing Corrections | Goalie Gear Fit" description="How this independent goalie-pad chart reference handles manufacturer evidence, limitations, corrections and source reviews." canonicalPath="/about/" {breadcrumbs} pageType="article" dateModified="2026-10-22">
+  <Breadcrumbs items={breadcrumbs}/>
+  <article class="content"><h1>About Goalie Gear Fit</h1>
+    <p>Goalie Gear Fit is an independent reference for matching body measurements to published goalie leg-pad charts. It is not a manufacturer, authorized dealer or professional fitting service. It does not claim physical testing or fitting credentials.</p>
+    <section class="card"><h2>Where the information comes from</h2><p>The <a href="/charts/">brand pages</a> retain the measurement method, category boundaries and source-specific limitations. Charts and official-tool observations can narrow a shortlist; they cannot establish the pad's condition, comfort, rotation or knee landing on your body.</p><p><a href="/methodology/">Read the source-review and calculation method</a>.</p></section>
+    <section class="card"><h2>Report a source change or sizing error</h2><p>Use the public project tracker. Include the affected page, manufacturer/model/generation, source URL and the published row that appears incorrect. Do not post private measurements or personal information.</p><p><a href="https://github.com/Coriol-is/goaliegearfit/issues/new" rel="external">Report a correction on GitHub</a>. The maintainers check reproducible claims against primary evidence, update the reviewed data and run boundary tests before publication.</p></section>
+    <section class="card"><h2>Independence and limitations</h2><p>The calculator does not rank equipment by payment or invent a nearest size when the source has a gap. Any future commercial relationship will be disclosed where relevant. Unsupported brands or model generations remain unsupported until their evidence is reviewed.</p><p>For a product-specific fit question, contact the manufacturer or qualified dealer. Verify knee-block landing, movement and thigh-rise interference in your complete protective setup.</p></section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,13 @@
+---
+import dataset from "../../data/sizing/goalie-leg-pads-us-v0.1.json";
+const overdue = dataset.freshness !== "current" || new Date().toISOString().slice(0, 10) > dataset.nextReviewAt;
+---
+<aside class="review-status" data-review-deadline={dataset.nextReviewAt} hidden={!overdue}>
+  <strong>Source review overdue.</strong> Some charts are due for a source check. Confirm the exact model and generation with the manufacturer. <a href="/methodology/#source-review">Review status</a> · {dataset.nextReviewAt}
+</aside>
+<script>
+  document.querySelectorAll<HTMLElement>("[data-review-deadline]").forEach((banner) => {
+    if (new Date().toISOString().slice(0, 10) > banner.dataset.reviewDeadline!) banner.hidden = false;
+  });
+</script>
+<style>.review-status { padding: .8rem 1rem; margin: 1rem 0; border-left: 3px solid #9c691f; background: #f7efe1; color: #352b1c; font-size: .9rem; } .review-status[hidden] { display: none; }</style>

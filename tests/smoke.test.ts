@@ -10,7 +10,7 @@ import extra from "../src/data/sizing/fixtures/goalie-leg-pads-us-v0.1.cases.jso
 describe("vendored dataset smoke", () => {
   test("dataset rule count matches manifest.ruleCount", () => {
     expect(dataset.rules.length).toBe(manifest.ruleCount);
-    expect(dataset.rules.length).toBe(76);
+    expect(dataset.rules.length).toBe(77);
   });
 
   test("base + extra fixture cases match manifest.fixtureCount", () => {
@@ -26,6 +26,6 @@ describe("vendored dataset smoke", () => {
   test("dataset and manifest identify the same dataset version", () => {
     expect(dataset.datasetId).toBe(manifest.datasetId);
     expect(dataset.version).toBe(manifest.version);
-    expect(dataset.version).toBe("0.1.1");
+    expect(dataset.version).toBe("0.1.2");
   });
 });

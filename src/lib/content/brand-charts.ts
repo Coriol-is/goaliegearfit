@@ -5,7 +5,7 @@ export type BrandSlug = (typeof brandSlugs)[number];
 const names: Record<BrandSlug, string> = { bauer: "Bauer", ccm: "CCM", true: "TRUE", warrior: "Warrior", brians: "Brian's" };
 const vendorSources: Record<BrandSlug, { websiteUrl: string; sizingUrl: string; logoPath: string; inverseLogo?: boolean }> = {
   bauer: { websiteUrl: "https://www.bauer.com/", sizingUrl: "https://www.bauer.com/pages/size-guide-goalie-pads", logoPath: "/brand-logos/bauer.png" },
-  ccm: { websiteUrl: "https://us.ccmhockey.com/homepage.html", sizingUrl: "https://us.ccmhockey.com/Goalie/Explore/Protective-Accessories/KPXF-SR.html", logoPath: "/brand-logos/ccm.svg" },
+  ccm: { websiteUrl: "https://us.ccmhockey.com/homepage.html", sizingUrl: "https://us.ccmhockey.com/Goalie/Explore/Protective-Accessories/KPXF-SR.html#goalieLegPad", logoPath: "/brand-logos/ccm.svg" },
   true: { websiteUrl: "https://www.true-sports.com/en-ca/", sizingUrl: "https://customizer.truetempergoalie.com/storage/IzCEzVuCHNb0grhMr13qhou2hSxc6v95VbeOy6AQ.pdf", logoPath: "/brand-logos/true.png", inverseLogo: true },
   warrior: { websiteUrl: "https://www.warrior.com/en/products/hockey", sizingUrl: "https://warriorsupport.zendesk.com/hc/en-us/articles/42271631661203-24-25-Goalie-Leg-Pad-Sizing-Chart", logoPath: "/brand-logos/warrior.svg" },
   brians: { websiteUrl: "https://www.goalies-only.com/", sizingUrl: "https://www.goalies-only.com/custom-fitting-pads/", logoPath: "/brand-logos/brians.png" },
@@ -24,7 +24,7 @@ export function getBrandCharts(): BrandChart[] {
     const brand = names[slug];
     const rules = datasetJson.rules.filter((rule) => rule.brand === brand);
     const categories = [...new Set(rules.map((rule) => rule.category))].map((name) => ({ name, rules: rules.filter((rule) => rule.category === name) }));
-    return { slug, brand, datasetId: datasetJson.datasetId, version: datasetJson.version, market: datasetJson.market, reviewedAt: datasetJson.reviewedAt, vendor: vendorSources[slug], support: datasetJson.brandSupport[brand as keyof typeof datasetJson.brandSupport], rules, categories };
+    return { slug, brand, datasetId: datasetJson.datasetId, version: datasetJson.version, market: datasetJson.market, reviewedAt: rules.map(rule => rule.reviewedAt).sort()[0] ?? datasetJson.reviewedAt, vendor: vendorSources[slug], support: datasetJson.brandSupport[brand as keyof typeof datasetJson.brandSupport], rules, categories };
   });
 }
 
