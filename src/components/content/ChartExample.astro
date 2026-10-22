@@ -1,0 +1,18 @@
+---
+import type { BrandChart } from "../../lib/content/brand-charts";
+const { chart } = Astro.props as { chart: BrandChart };
+const row = chart.rules[Math.floor(chart.rules.length / 2)];
+const names: Record<string,string> = {floor_to_knee:"floor to knee",ankle_to_knee:"ankle to knee",knee_to_thigh:"knee to thigh",height:"standing height (exact chart anchor)",height_anchor:"standing height (advisory anchor)"};
+const example = row.dimensions.map(d => {
+  const native = d.sourceNative;
+  const value = native.min === null ? native.max : native.max === null ? native.min : (native.min + native.max) / 2;
+  return `${names[d.field] ?? d.field}: ${Number(value!.toFixed(3))} ${native.unit}`;
+});
+const category = row.category === "source_not_explicit" ? undefined : row.category;
+---
+<section class="content card">
+  <h2>A numerical example from this chart</h2>
+  <p>Consider these illustrative values: <strong>{example.join("; ")}</strong>{category ? `, in the ${category} product category` : ""}. They are inside the published row for size <strong>{row.sizeLabel}</strong>. Another row may also match at an inclusive boundary.</p>
+  <p>This example explains the chart, not a physical fitting. {chart.slug === "brians" ? "Brian's coverage is limited to exact verified measurement pairs. Values between these pairs are not interpolated." : chart.slug === "ccm" ? "CCM requires the exact height anchor and FTK range in the same column; a nearby height is not substituted." : chart.slug === "warrior" ? "Warrior uses FTK for base size. Height is advisory, and any thigh-rise extension must be checked separately for that specific base size." : "Keep the chart category and exact model generation in view; the same letter or number does not convert across brands."}</p>
+  <p><a href={`/calculator/?brand=${chart.slug}`}>Enter your measurements for {chart.brand}</a>. Confirm knee-block landing in your actual skates and knee protection before use.</p>
+</section>

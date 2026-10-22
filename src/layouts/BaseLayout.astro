@@ -4,6 +4,7 @@ import "../styles/brand.css";
 import "../styles/calculator.css";
 import SiteHeader from "../components/layout/SiteHeader.astro";
 import SiteFooter from "../components/layout/SiteFooter.astro";
+import ReviewStatus from "../components/content/ReviewStatus.astro";
 import {resolveSiteConfig} from "../lib/site-config";
 import {resolveAnalyticsConfig} from "../lib/analytics";
 interface Crumb {label:string;href?:string}
@@ -22,6 +23,7 @@ const graph=[{"@type":"Organization","@id":organizationId,name:"Goalie Gear Fit"
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="build-revision" content={process.env.GITHUB_SHA ?? "local"} />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#172023">
     <meta name="robots" content={!noindex&&launchReady?"index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1":"noindex,nofollow"}>
@@ -34,5 +36,5 @@ const graph=[{"@type":"Organization","@id":organizationId,name:"Goalie Gear Fit"
     {analytics.provider!=="none"&&<script is:inline async={analytics.provider==="ga"} defer={analytics.provider==="plausible"} src={analytics.scriptSrc}></script>}
     {analyticsBootstrap&&<script is:inline set:html={analyticsBootstrap}/>}<script is:inline type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@graph":graph})}/>
   </head>
-  <body><SiteHeader/><main class="shell"><slot/></main><SiteFooter/></body>
+  <body><SiteHeader/><main class="shell"><ReviewStatus/><slot/></main><SiteFooter/></body>
 </html>

@@ -10,6 +10,16 @@ on:
   pull_request:
   push:
     branches: [main]
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  PUBLIC_SITE_ORIGIN: https://goaliegearfit.com
+
 jobs:
   gates:
     runs-on: ubuntu-26.04
@@ -25,6 +35,7 @@ jobs:
       - run: npx vitest run # smoke now; 72 fixtures + properties from Plan 03 (ENG-02/03)
       - run: npm run build # astro build -> dist/ (prebuild re-runs verify-dataset)
       - run: npm run scan-dist # no-snapshot allowlist (DEPL-02)
+      - run: npm run audit:seo
 
   # Secrets are not readable in job-level `if` expressions, so probe them in a
   # tiny job and gate deploy on its output (env indirection pattern).
@@ -57,9 +68,16 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npm run verify-dataset && npm run build
+      - run: npm run verify-dataset && npm run build && npm run audit:seo
+        env:
+          PUBLIC_ANALYTICS_PROVIDER: ${{ vars.PUBLIC_ANALYTICS_PROVIDER }}
+          PUBLIC_PLAUSIBLE_SCRIPT_SRC: ${{ vars.PUBLIC_PLAUSIBLE_SCRIPT_SRC }}
+          PUBLIC_GA_MEASUREMENT_ID: ${{ vars.PUBLIC_GA_MEASUREMENT_ID }}
       - uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy
+      - run: node scripts/verify-live.mjs
+        env:
+          SITE_ORIGIN: https://goaliegearfit.com

@@ -2,7 +2,17 @@
 interface Row { id:string; sizeLabel:string; category?:string; dimensions:Array<{field:string;sourceNative?:{min:number|null;max:number|null;unit:string}}> }
 interface Props { caption:string; rows:Row[] }
 const {caption,rows}=Astro.props;
-const range=(row:Row)=>row.dimensions.map(d=>`${d.field.replaceAll("_"," ")}: ${d.sourceNative?.min??"open"}–${d.sourceNative?.max??"open"} ${d.sourceNative?.unit??""}`).join("; ");
+const fields = [...new Set(rows.flatMap(row => row.dimensions.map(d => d.field)))];
+const labels: Record<string,string> = {floor_to_knee:"Floor to knee",ankle_to_knee:"Ankle to knee",height:"Height (exact anchor)",height_anchor:"Height (advisory anchor)",knee_to_thigh:"Knee to thigh"};
+const range=(row:Row,field:string)=>{
+  const native = row.dimensions.find(d=>d.field===field)?.sourceNative;
+  if (!native) return "—";
+  const {min,max,unit}=native;
+  if (min===max) return `${min} ${unit}`;
+  if (min===null) return `Up to ${max} ${unit}`;
+  if (max===null) return `${min} ${unit} and above`;
+  return `${min}–${max} ${unit}`;
+};
 const categoryLabel=(category?:string)=>category==="source_not_explicit"||!category?"Not specified by manufacturer":category;
 ---
-<p class="table-hint" id="chart-scroll-hint">Scroll the chart horizontally on smaller screens.</p><div class="table-scroll" tabindex="0" aria-describedby="chart-scroll-hint"><table><caption>{caption}</caption><thead><tr><th scope="col">Size</th><th scope="col">Category</th><th scope="col">Measurements</th></tr></thead><tbody>{rows.map(row=><tr data-rule-id={row.id}><th scope="row">{row.sizeLabel}</th><td>{categoryLabel(row.category)}</td><td>{range(row)}</td></tr>)}</tbody></table></div>
+<p class="table-hint" id="chart-scroll-hint">Scroll the chart horizontally on smaller screens. An exact anchor is a single published value, not a height band.</p><div class="table-scroll" tabindex="0" aria-describedby="chart-scroll-hint"><table><caption>{caption}</caption><thead><tr><th scope="col">Size</th><th scope="col">Category</th>{fields.map(field=><th scope="col">{labels[field]??field.replaceAll("_"," ")}</th>)}</tr></thead><tbody>{rows.map(row=><tr data-rule-id={row.id}><th scope="row">{row.sizeLabel}</th><td>{categoryLabel(row.category)}</td>{fields.map(field=><td>{range(row,field)}</td>)}</tr>)}</tbody></table></div>
