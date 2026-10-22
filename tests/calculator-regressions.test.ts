@@ -160,3 +160,61 @@ describe("Warrior extension rendering", () => {
     );
   });
 });
+
+describe("Warrior adjacent-size extension provenance", () => {
+  it("keeps different extensions attached to their own base size", () => {
+    const out = recommend(data, {
+      brand: "Warrior",
+      floor_to_knee_in: 19.25,
+      knee_to_thigh_in: 9,
+    });
+    expect(out.extension_in).toBeUndefined();
+    expect(out.extension_options).toEqual([
+      { size: '32"', status: "available", extension_in: 1.5 },
+      { size: '33"', status: "available", extension_in: 1 },
+    ]);
+    const html = resultMetadataHtml(out);
+    expect(html).toMatch(/Base size 32.*\+1.5 in.*Base size 33.*\+1 in/s);
+  });
+  it("does not apply an available adjacent row extension to a source N/A row", () => {
+    const out = recommend(data, {
+      brand: "Warrior",
+      floor_to_knee_in: 20.25,
+      knee_to_thigh_in: 8,
+    });
+    expect(out.extension_in).toBeUndefined();
+    expect(out.extension_options).toEqual([
+      { size: '34"', status: "available", extension_in: 0 },
+      { size: '35"', status: "unavailable" },
+    ]);
+    expect(resultMetadataHtml(out)).toMatch(
+      /Base size 34.*\+0 in.*Base size 35.*unavailable \(source marks N\/A\)/s,
+    );
+  });
+  it("labels supplied KTT as unverified when the base row has no extension mapping", () => {
+    const out = recommend(data, {
+      brand: "Warrior",
+      floor_to_knee_in: 18.5,
+      knee_to_thigh_in: 123,
+    });
+    expect(out.sizes).toEqual(['31"']);
+    expect(out.extension_in).toBeUndefined();
+    expect(out.extension_options).toEqual([
+      { size: '31"', status: "unverified" },
+    ]);
+    expect(resultMetadataHtml(out)).toContain(
+      "base size only; extension not verified",
+    );
+  });
+  it("labels an unmatched extension input unverified without extrapolating", () => {
+    const out = recommend(data, {
+      brand: "Warrior",
+      floor_to_knee_in: 19.5,
+      knee_to_thigh_in: 123,
+    });
+    expect(out.extension_options).toEqual([
+      { size: '33"', status: "unverified" },
+    ]);
+    expect(out.extension_in).toBeUndefined();
+  });
+});

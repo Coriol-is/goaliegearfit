@@ -227,5 +227,11 @@ export const coverageCopy: Record<CalculatorBrand, string> = {
     "Unsupported: no reviewed official sizing mapping. Consult Vaughn or an experienced dealer before measuring for this calculator.",
 };
 export function resultMetadataHtml(out: Result) {
-  return `${out.display_badge ? `<p><strong>${out.display_badge}</strong></p>` : ""}${out.knee_block_verification_required ? "<p><strong>Mandatory knee-block verification:</strong> this provisional chart match needs a physical knee-block fit check.</p>" : ""}${out.extension_in !== undefined ? `<p>Published thigh-rise extension: <strong>+${out.extension_in} in</strong>. This is separate from the base size.</p>` : ""}`;
+  const provenance = `${out.display_badge ? `<p><strong>${out.display_badge}</strong></p>` : ""}${out.knee_block_verification_required ? "<p><strong>Mandatory knee-block verification:</strong> this provisional chart match needs a physical knee-block fit check.</p>" : ""}`;
+  const extensions = out.extension_options?.length
+    ? `<p>Thigh-rise check for each base chart size:</p><ul>${out.extension_options.map((option) => `<li>Base size ${option.size}: ${option.status === "available" ? `published extension <strong>+${option.extension_in} in</strong>` : option.status === "unavailable" ? "extension unavailable (source marks N/A)" : "base size only; extension not verified for this knee-to-thigh measurement"}.</li>`).join("")}</ul><p>Extension is separate from the base size. An unavailable or unverified extension is not an available pad configuration.</p>`
+    : out.extension_in !== undefined
+      ? `<p>Published thigh-rise extension: <strong>+${out.extension_in} in</strong>. This is separate from the base size.</p>`
+      : "";
+  return provenance + extensions;
 }

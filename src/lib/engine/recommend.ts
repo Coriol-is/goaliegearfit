@@ -131,24 +131,43 @@ export function recommend(dataset: Dataset, input: EngineInput): Result {
       matchedRuleIds: [],
       ...gate,
     };
-  if (
-    input.knee_to_thigh_in !== undefined &&
-    found.some((r) => r.thighRiseMapping)
-  ) {
-    const e = found
-      .flatMap((r) => r.thighRiseMapping ?? [])
-      .find(
+  if (input.brand === "Warrior" && input.knee_to_thigh_in !== undefined) {
+    const extension_options = found.map((rule) => {
+      const entry = rule.thighRiseMapping?.find(
         (x) => Math.abs(x.knee_to_thigh_in - input.knee_to_thigh_in!) <= EPS,
       );
-    if (!e || e.status === "N/A")
+      if (!entry)
+        return { size: rule.sizeLabel, status: "unverified" as const };
+      if (entry.status === "N/A")
+        return { size: rule.sizeLabel, status: "unavailable" as const };
+      return {
+        size: rule.sizeLabel,
+        status: "available" as const,
+        extension_in: entry.extension_in,
+      };
+    });
+    if (extension_options.every((option) => option.status === "unavailable"))
       return {
         status: "cannot_determine",
         reason: "extension_not_available",
         sizes: [],
         matchedRuleIds: [],
+        extension_options,
         ...gate,
       };
-    return { ...result(found, gate), extension_in: e.extension_in };
+    const first = extension_options[0]!;
+    const shared =
+      first.status === "available" &&
+      extension_options.every(
+        (option) =>
+          option.status === "available" &&
+          option.extension_in === first.extension_in,
+      );
+    return {
+      ...result(found, gate),
+      extension_options,
+      ...(shared ? { extension_in: first.extension_in } : {}),
+    };
   }
   return result(found, gate);
 }
