@@ -57,6 +57,7 @@ export interface EngineInput {
 export type CannotDetermineReason =
   | "missing_category"
   | "missing_height"
+  | "unsupported_height"
   | "missing_floor_to_knee"
   | "source_gap"
   | "personal_preference_not_base_size_rule"
@@ -68,6 +69,11 @@ export type ExtensionOption = {
   extension_in?: number;
 };
 type Meta = {
+  height_advisory?: {
+    status: "not_supplied" | "matches_anchor" | "different_anchor" | "unlisted";
+    supplied_in?: number;
+    row_anchors_in: number[];
+  };
   extension_options?: ExtensionOption[];
   sizes: string[];
   matchedRuleIds: string[];

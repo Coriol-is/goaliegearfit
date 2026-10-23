@@ -58,6 +58,8 @@ export const toInches = (v: number, u: "in" | "cm") =>
   u === "cm" ? v / 2.54 : v;
 export const reasonCopy: Record<CannotDetermineReason, string> = {
   missing_category: "Choose the age or level category used by this chart.",
+  unsupported_height:
+    "Your standing height is not a published anchor supported by our exact-anchor editorial policy. This does not establish a physical fit conflict. We do not round or interpolate heights.",
   missing_height: "Add standing height to check this brand's published anchor.",
   missing_floor_to_knee:
     "Add the floor-to-knee measurement required by this chart.",
@@ -94,17 +96,19 @@ export function resultExplanation(dataset: Dataset, result: Result) {
   if (!rules.length) return "";
   return rules
     .map((rule) => {
-      const ranges = rule.dimensions.map((d) => {
-        const n = d.sourceNative;
-        const low = n?.min ?? d.min,
-          high = n?.max ?? d.max,
-          unit = n?.unit ?? d.unit;
-        const range =
-          low === high && low !== null
-            ? formatNumber(low)
-            : `${low === null ? "open" : formatNumber(low)}–${high === null ? "open" : formatNumber(high)}`;
-        return `${measurementNames[d.field]} ${range} ${unit}`;
-      });
+      const ranges = rule.dimensions
+        .filter((d) => d.field !== "height_anchor")
+        .map((d) => {
+          const n = d.sourceNative;
+          const low = n?.min ?? d.min,
+            high = n?.max ?? d.max,
+            unit = n?.unit ?? d.unit;
+          const range =
+            low === high && low !== null
+              ? formatNumber(low)
+              : `${low === null ? "open" : formatNumber(low)}–${high === null ? "open" : formatNumber(high)}`;
+          return `${measurementNames[d.field]} ${range} ${unit}`;
+        });
       const category =
         rule.category && rule.category !== "source_not_explicit"
           ? ` (${rule.category})`
@@ -140,6 +144,11 @@ export function comparisonResults(
         active = brandInputs[selected];
       if (c.method !== active.method)
         return { brand: name, text: "Different measurement method needed." };
+      if (measurementProtocol(name) !== measurementProtocol(selected))
+        return {
+          brand: name,
+          text: "Remeasure floor-to-knee using this brand’s posture (seated for Warrior; standing for the other supported FTK charts).",
+        };
       if (c.category && name !== selected)
         return { brand: name, text: "Brand-specific category needed." };
       if (name === "CCM" && v.height === undefined)
@@ -189,9 +198,12 @@ export function transitionMeasurements(
   const before = brandInputs[previous],
     after = brandInputs[next];
   return {
-    primary: before.method === after.method ? v.primary : undefined,
+    primary:
+      measurementProtocol(previous) === measurementProtocol(next)
+        ? v.primary
+        : undefined,
     height: after.height && before.height ? v.height : undefined,
-    ktt: after.ktt && before.ktt ? v.ktt : undefined,
+    ktt: previous === next && after.ktt ? v.ktt : undefined,
   };
 }
 export function validateMeasurements(
@@ -217,12 +229,12 @@ export function validateMeasurements(
 export const coverageCopy: Record<CalculatorBrand, string> = {
   Bauer:
     "Choose the product category printed on your pad chart, not your playing skill. Only reviewed chart ranges are supported.",
-  CCM: "Requires FTK and an exact published standing-height anchor. Unlisted heights are unsupported; we do not interpolate.",
+  CCM: "Our editorial policy matches FTK only with an exact published standing-height anchor. This is a coverage limitation, not a manufacturer requirement to have an exact height. Unlisted heights are unsupported; we do not round or interpolate.",
   TRUE: "Choose JR, INT or SR from the product chart, not your playing skill.",
   Warrior:
     "Reviewed Ritual 2024–25 chart. Standing height is optional advisory input; knee-to-thigh optionally checks a published extension.",
   "Brian's":
-    "Limited verified-tool coverage: only 14 exact ATK + knee-to-thigh pairs. Model/category scope is unconfirmed. For other measurements use the official tool or a dealer.",
+    "Limited verified-tool coverage: only 14 captured exact ATK + knee-to-thigh pairs; other official tool combinations are not yet reviewed here. Model/category scope is unconfirmed. For other measurements use the official tool or a dealer.",
   Vaughn:
     "Unsupported: no reviewed official sizing mapping. Consult Vaughn or an experienced dealer before measuring for this calculator.",
 };
@@ -233,5 +245,48 @@ export function resultMetadataHtml(out: Result) {
     : out.extension_in !== undefined
       ? `<p>Published thigh-rise extension: <strong>+${out.extension_in} in</strong>. This is separate from the base size.</p>`
       : "";
-  return provenance + extensions;
+  const a = out.height_advisory;
+  const height = a
+    ? `<p>Standing-height advisory: ${a.status === "not_supplied" ? "not supplied" : `${a.supplied_in} in supplied; ${a.status === "matches_anchor" ? "matches a printed anchor for a base candidate" : a.status === "different_anchor" ? "matches a different printed anchor; base FTK result is unchanged" : "not a listed anchor, so height is unassessed"}`}. Printed anchors for these base rows: ${a.row_anchors_in.join(" or ")} in. Height is separate advisory information, not a base-size veto.</p>`
+    : "";
+  return provenance + height + extensions;
 }
+
+export function measurementProtocol(brand: CalculatorBrand) {
+  return brand === "Warrior"
+    ? "seated_ftk"
+    : brandInputs[brand].method === "floor_to_knee"
+      ? "standing_ftk"
+      : "atk";
+}
+export const measurementHelp: Record<
+  CalculatorBrand,
+  { primary: string; ktt: string }
+> = {
+  Bauer: {
+    primary:
+      "Standing floor-to-knee: soft tape from the floor to the centre of the knee. Follow the exact Bauer guide for posture and footwear; select the product chart category.",
+    ktt: "",
+  },
+  CCM: {
+    primary:
+      "Barefoot floor-to-knee, knee slightly bent, floor to the centre of the kneecap. Height is a separate standing measurement; our tool supports exact printed height anchors only.",
+    ktt: "",
+  },
+  TRUE: {
+    primary:
+      "Follow the TRUE catalog’s floor-to-knee diagram and its posture/footwear instructions; measure to the middle of the knee. Select the JR/INT/SR product chart category.",
+    ktt: "",
+  },
+  Warrior: {
+    primary:
+      "Seated floor-to-knee following the Ritual 24–25 chart diagram: floor to knee pivot point. Remeasure; do not reuse standing FTK from another brand.",
+    ktt: "Optional extension lookup only. Follow the chart’s knee-to-thigh diagram; this does not determine base size. Some base sizes have no reviewed extension mapping.",
+  },
+  "Brian's": {
+    primary:
+      "Ankle-to-knee: the recorded tool protocol is mid-ankle to mid-knee. Follow the official tool diagram. Only 14 captured exact pairs are supported here.",
+    ktt: "The recorded official tool protocol is mid-knee to mid-thigh. Follow that diagram; do not enter a desired extension preference instead.",
+  },
+  Vaughn: { primary: "", ktt: "" },
+};

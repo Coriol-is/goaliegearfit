@@ -152,8 +152,9 @@ describe("Warrior extension rendering", () => {
       knee_to_thigh_in: 8,
     });
     expect(out).toMatchObject({
-      status: "cannot_determine",
-      reason: "extension_not_available",
+      status: "candidate",
+      sizes: ['35"'],
+      extension_options: [{ size: '35"', status: "unavailable" }],
     });
     expect(resultMetadataHtml(out)).not.toContain(
       "Published thigh-rise extension",

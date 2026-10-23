@@ -98,8 +98,15 @@ export function recommend(dataset: Dataset, input: EngineInput): Result {
   if (fields.has("height")) {
     const a = scoped.filter((r) => matchesDimension(r, "floor_to_knee", input)),
       b = scoped.filter((r) => matchesDimension(r, "height", input));
-    if (!a.length && !b.length) found = [];
-    else if (!a.length || !b.length || !a.some((r) => b.includes(r)))
+    if (!b.length)
+      return {
+        status: "cannot_determine",
+        reason: "unsupported_height",
+        sizes: [],
+        matchedRuleIds: [],
+        ...gate,
+      };
+    if (!a.length || !a.some((r) => b.includes(r)))
       return { status: "conflict", sizes: [], matchedRuleIds: [], ...gate };
     else found = a.filter((r) => b.includes(r));
   } else if (fields.has("height_anchor")) {
@@ -116,8 +123,26 @@ export function recommend(dataset: Dataset, input: EngineInput): Result {
         matchedRuleIds: [],
         ...gate,
       };
-    if (b.length && !a.some((r) => b.includes(r)))
-      return { status: "conflict", sizes: [], matchedRuleIds: [], ...gate };
+    gate.height_advisory = {
+      status:
+        input.height_in === undefined
+          ? "not_supplied"
+          : !b.length
+            ? "unlisted"
+            : a.some((r) => b.includes(r))
+              ? "matches_anchor"
+              : "different_anchor",
+      ...(input.height_in !== undefined
+        ? { supplied_in: input.height_in }
+        : {}),
+      row_anchors_in: a
+        .flatMap((r) =>
+          r.dimensions
+            .filter((d) => d.field === "height_anchor")
+            .map((d) => d.sourceNative?.min ?? d.min! / 2.54),
+        )
+        .filter((x): x is number => x !== null),
+    };
     found = a;
   } else
     found = scoped.filter((r) =>
@@ -146,15 +171,6 @@ export function recommend(dataset: Dataset, input: EngineInput): Result {
         extension_in: entry.extension_in,
       };
     });
-    if (extension_options.every((option) => option.status === "unavailable"))
-      return {
-        status: "cannot_determine",
-        reason: "extension_not_available",
-        sizes: [],
-        matchedRuleIds: [],
-        extension_options,
-        ...gate,
-      };
     const first = extension_options[0]!;
     const shared =
       first.status === "available" &&

@@ -35,7 +35,8 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
         </select>
       </label>
       <p id="coverage" role="status"></p>
-      <fieldset>
+      <p id="unsupported-route" hidden><a href="https://vaughnhockey.com/faq/">Vaughn official fitting support</a> — ask a retailer for an in-person fitting.</p>
+      <fieldset id="units-field">
         <legend>Units</legend>
         <label class="inline">
           <input type="radio" name="unit" value="in" checked /> Inches
@@ -60,7 +61,7 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
           inputmode="decimal"
           required
         />
-        <small>Use the method named by the chart.</small>
+        <small id="primary-help">Use the method named by the chart.</small>
       </label>
       <label id="height-field">
         <span id="height-label">Standing height</span>
@@ -74,7 +75,7 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
       </label>
       <label id="ktt-field">
         <span id="ktt-label">Knee to thigh</span>
-        <input id="ktt" type="number" min="0" step="any" inputmode="decimal" />
+        <input id="ktt" type="number" min="0" step="any" inputmode="decimal" /><small id="ktt-help"></small>
       </label>
       <p id="form-error" class="error" role="alert"></p>
       <button class="button" type="submit">
@@ -140,6 +141,7 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
       transitionMeasurements,
       validateMeasurements,
       resultMetadataHtml,
+      measurementHelp,
     } from "../lib/calculator/ui";
     import {
       analyticsEvents,
@@ -168,6 +170,11 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
         c = brandInputs[b];
       document.querySelector("#primary-label")!.textContent =
         c.method === "floor_to_knee" ? "Floor to knee" : "Ankle to knee";
+      const supported=b!=="Vaughn";
+      field("#primary-field",supported);
+      field("#units-field",supported);
+      const submit=form.querySelector<HTMLButtonElement>('button[type="submit"]')!;submit.hidden=!supported;submit.disabled=!supported;
+      document.querySelector<HTMLElement>("#unsupported-route")!.hidden=supported;
       field("#category-field", c.category);
       field("#height-field", c.height);
       field("#ktt-field", c.ktt);
@@ -197,6 +204,8 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
         inputs[key].value = displayMeasurement(canonical[key], unit);
       document.querySelector("#primary-label")!.textContent =
         `${brandInputs[currentBrand].method === "floor_to_knee" ? "Floor to knee" : "Ankle to knee"} (${unit})`;
+      document.querySelector("#primary-help")!.textContent=measurementHelp[currentBrand].primary;
+      document.querySelector("#ktt-help")!.textContent=measurementHelp[currentBrand].ktt;
       document.querySelector("#coverage")!.textContent =
         coverageCopy[currentBrand];
       document.querySelector("#height-label")!.textContent =
@@ -290,7 +299,7 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
         out.status === "cannot_determine"
           ? reasonCopy[out.reason]
           : out.status === "conflict"
-            ? "The measurements do not share a reviewed chart row. A standing height outside the published anchors is unsupported; do not round it to force a match."
+            ? "The entered measurements do not share a reviewed chart row."
             : "The measurements match the reviewed chart range.";
       const explanation = resultExplanation(datasetJson as Dataset, out);
       const extensionNote =
