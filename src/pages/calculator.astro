@@ -192,6 +192,13 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
     const inputs = { primary, height, ktt };
     const comparison = document.querySelector<HTMLElement>("#comparison")!;
     function invalidate() {
+      if(currentBrand==="Vaughn"){
+        heading.textContent="Vaughn sizing is not supported";
+        body.innerHTML='<p>No reviewed official measurement mapping is available for Vaughn. Ask a retailer for an in-person fitting.</p><p><a href="https://vaughnhockey.com/faq/">Vaughn official fitting support</a></p>';
+        comparison.textContent="No cross-brand calculation is available for this unsupported measurement mapping.";
+        error.textContent="";
+        return;
+      }
       heading.textContent = "Calculate with your current measurements";
       body.textContent =
         "Inputs changed. Calculate again to see a current chart match.";
@@ -250,6 +257,7 @@ const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Calculator" }];
     currentBrand = brand.value as keyof typeof brandInputs;
     configure();
     renderInputs();
+    if(currentBrand==="Vaughn")invalidate();
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       error.textContent = "";
